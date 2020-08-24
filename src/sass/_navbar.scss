@@ -22,8 +22,11 @@
         @include flex-row;
         justify-content: space-between;
 
-        .nav__list-item {
+        .nav__list-item, .nav__dropdown-item {
             display: inline-block;
+        }
+
+        .nav__list-item {
             padding: 25px 20px;
             cursor: pointer;
         }
@@ -32,23 +35,23 @@
             position: relative;
 
             &:hover .nav__dropdown {
-                left: -1rem;
+                left: -3rem;
                 opacity: 1;
             }
         }
 
         .nav__dropdown {
             position: absolute;
-            top: 4.6rem;
+            top: 4.2rem;
             left: 13rem;
-            width: 190px;
+            width: 245px;
             opacity: 0;
-            background: blue;
+            background: pink;
             padding: 1rem;
             transition: all 100ms ease-in-out;
 
-            li:not(:last-child) {
-                margin-bottom: 1rem;
+            .nav__dropdown-item {
+                padding: 15px 5px;
             }
         }
     }
