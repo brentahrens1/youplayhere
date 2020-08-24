@@ -13,8 +13,8 @@
     @include flex-row;
     justify-content: space-between;
 
-    &__logo, &__list {
-        margin: 0 2rem;
+    &__logo, &__list, .hamburger {
+        margin: 0 1.5rem;
     }
 
     &__list {
@@ -53,6 +53,100 @@
             .nav__dropdown-item {
                 padding: 15px 5px;
             }
+        }
+    }
+
+    .hamburger {
+        display: none;
+        position: relative;
+        width: 45px;
+        height: 20px;
+        cursor: pointer;
+        z-index: 999;
+
+        &__bar {
+            position: absolute;
+            left: 0;
+            width: 26px;
+            height: 2px;
+            background: $primary-color;
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: 8px;
+            }
+
+            &:nth-child(3) {
+                top: 16px;
+            }
+            .open > & {
+                transition: all 1s ease-in-out;
+            }
+            .open > &:first-child {
+                top: .7rem;
+                transform: rotate(45deg);
+                transition: all .50s ease-in-out;
+            }
+            .open > &:nth-child(2) {
+                opacity: 0;
+                left: -60px;
+                transition: all .50s ease-in-out;
+            }
+            .open > &:nth-child(3) {
+                top: .7rem;
+                transform: rotate(-45deg);
+                transition: all .50s ease-in-out;
+            }
+        }
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        opacity: 0;
+        width: 100%;
+        height: 100vh;
+        background: #212121;
+        @include flex-column;
+        justify-content: center;
+        transition: all 300ms ease-in-out;
+
+        &__list {
+            color: $primary-color;
+            padding: 0;
+            font-size: $overlay-size;
+
+            .overlay__item:not(:nth-child(3)) {
+                margin-bottom: 1rem;
+            }
+        }
+
+        &__dropdown {
+            margin-top: .5rem;
+            padding: 0;
+            font-size: $overlay-dropdown-size;
+        }
+    }
+
+    .show {
+        right: 0;
+        opacity: 1;
+    }
+}
+
+@media (max-width: $mobile) {
+
+    .nav {
+        &__list {
+            display: none;
+        }
+
+        .hamburger {
+            display: block;
         }
     }
 }
