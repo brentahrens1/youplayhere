@@ -55,116 +55,118 @@
             }
         }
     }
+}
 
-    .hamburger {
-        display: none;
-        position: relative;
-        width: 45px;
-        height: 20px;
-        cursor: pointer;
-        z-index: 999;
+.hamburger {
+    display: none;
+    position: relative;
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 999;
 
-        &__bar {
-            position: absolute;
-            left: 0;
-            width: 26px;
-            height: 2px;
-            background: $primary-color;
-
-            &:nth-child(1) {
-                top: 0;
-            }
-
-            &:nth-child(1) {
-                top: 10px;
-            }
-
-            &:nth-child(2) {
-                top: 20px;
-            }
-
-            .open > & {
-                transition: all 1s ease-in-out;
-            }
-
-            .open > &:first-child {
-                top: 0;
-                transform: rotate(135deg);
-                transition: all .50s ease-in-out;
-            }
-
-            .open > &:nth-child(2) {
-                opacity: 0;
-                left: -60px;
-                transition: all .50s ease-in-out;
-            }
-            
-            .open > &:nth-child(3) {
-                transform: rotate(-135deg);
-                transition: all .50s ease-in-out;
-            }
-        }
-    }
-
-    .overlay {
+    &__bar {
         position: absolute;
-        top: 0;
-        right: -100%;
-        opacity: 0;
-        width: 100%;
-        height: 100vh;
-        background: #212121;
-        @include flex-column;
-        transition: all 300ms ease-in-out;
+        left: 0;
+        width: 26px;
+        height: 2px;
+        background: $primary-color;
+        transition: all 200ms ease-in-out;
 
-        &__list {
-            margin-top: 6rem;
-            width: 100%;
-            color: $primary-color;
-            padding: 0 1rem;
-            font-size: $overlay-size;
-
-            .overlay__item {
-                position: relative;
-                cursor: pointer;
-                padding-bottom: .5rem;
-                border-bottom: .5px solid $primary-color;
-            }
-
-            .overlay__trigger::after {
-                @include toggle('+')
-            }
-
-            .overlay__trigger-active::after {
-                @include toggle('-')
-            }
-
-            .overlay__item:not(:nth-child(3)) {
-                margin-bottom: 1rem;
-            }
+        &:nth-child(1) {
+            top: 0;
         }
 
-        .overlay__dropdown-item {
-            font-size: $overlay-dropdown-size;
-            margin-bottom: .5rem;
+        &:nth-child(1) {
+            top: 10px;
         }
 
-        &__dropdown {
+        &:nth-child(2) {
+            top: 20px;
+        }
+
+        .open > & {
+            transition: all 200ms ease-in-out;
+        }
+
+        .open > &:first-child {
+            top: 10px;
+            transform: rotate(135deg);
+            transition: all 200ms ease-in-out;
+        }
+
+        .open > &:nth-child(2) {
             opacity: 0;
-            height: 0;
+            left: -60px;
+            transition: all 200ms ease-in-out;
+        }
+        
+        .open > &:nth-child(3) {
+            top: 10px;
+            transform: rotate(-135deg);
+            transition: all 200ms ease-in-out;
+        }
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    width: 100%;
+    height: 100vh;
+    background: #212121;
+    @include flex-column;
+    transition: all 300ms ease-in-out;
+
+    &__list {
+        margin-top: 6rem;
+        width: 100%;
+        color: $primary-color;
+        padding: 0 1rem;
+        font-size: $overlay-size;
+
+        .overlay__item {
+            position: relative;
+            cursor: pointer;
+            padding-bottom: .5rem;
+            border-bottom: .5px solid $primary-color;
         }
 
-        &__dropdown-show {
-            opacity: 1;
-            height: initial;
-            margin-top: 1rem;
+        .overlay__trigger::after {
+            @include toggle('+')
+        }
+
+        .overlay__trigger-active::after {
+            @include toggle('-')
+        }
+
+        .overlay__item:not(:nth-child(3)) {
+            margin-bottom: 1rem;
         }
     }
 
-    .show {
-        right: 0;
+    .overlay__dropdown-item {
+        font-size: $overlay-dropdown-size;
+        margin-bottom: .5rem;
+    }
+
+    &__dropdown {
+        opacity: 0;
+        height: 0;
+    }
+
+    &__dropdown-show {
         opacity: 1;
+        height: initial;
+        margin-top: 1rem;
     }
+}
+
+.show {
+    right: 0;
+    opacity: 1;
 }
 
 @media (max-width: $mobile) {
