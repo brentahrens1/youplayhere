@@ -71,7 +71,7 @@
         width: 26px;
         height: 2px;
         background: $primary-color;
-        transition: all 200ms ease-in-out;
+        transition: $hamburger-transition;
 
         &:nth-child(1) {
             top: 0;
@@ -86,25 +86,25 @@
         }
 
         .open > & {
-            transition: all 200ms ease-in-out;
+            transition: $hamburger-transition;
         }
 
         .open > &:first-child {
             top: 10px;
             transform: rotate(135deg);
-            transition: all 200ms ease-in-out;
+            transition: $hamburger-transition;
         }
 
         .open > &:nth-child(2) {
             opacity: 0;
             left: -60px;
-            transition: all 200ms ease-in-out;
+            transition: $hamburger-transition;
         }
         
         .open > &:nth-child(3) {
             top: 10px;
             transform: rotate(-135deg);
-            transition: all 200ms ease-in-out;
+            transition: $hamburger-transition;
         }
     }
 }
