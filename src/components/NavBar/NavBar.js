@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../../sass/_navbar.scss'
 
+import { Link } from 'react-router-dom'
+
 const NavBar = () => {
     const [ isOpen, setIsOpen ] = useState(false)
     const [ isMobileDropdown, setMobileDropdown ] = useState(false)
@@ -16,7 +18,7 @@ const NavBar = () => {
                 <li className="nav__list-item">Home</li>
                 <li className="nav__list-item dropdown-trigger">About
                     <ul className="nav__dropdown">
-                        <li className="nav__dropdown-item">What's You Play Here?</li>
+                        <li className="nav__dropdown-item"><Link to="/about-you-play-here">What's You Play Here?</Link></li>
                         <li className="nav__dropdown-item">Protagonist</li>
                         <li className="nav__dropdown-item">More about Ines / Contact</li>
                     </ul>
@@ -33,7 +35,7 @@ const NavBar = () => {
                     <li className="overlay__item">Home</li>
                     <li className={`overlay__item ${isMobileDropdown ? 'overlay__trigger-active' : 'overlay__trigger' }`} onClick={() => setMobileDropdown(!isMobileDropdown)}>About
                         <ul className={`overlay__dropdown ${isMobileDropdown ? 'overlay__dropdown-show' : ''}`}>
-                            <li className="overlay__dropdown-item">What's You Play Here?</li>
+                            <li className="overlay__dropdown-item"><Link to="/about-you-play-here">What's You Play Here?</Link></li>
                             <li className="overlay__dropdown-item">Protagonist</li>
                             <li className="overlay__dropdown-item">More about Ines / Contact</li>
                         </ul>

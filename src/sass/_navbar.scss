@@ -15,6 +15,10 @@
     @include flex-row;
     justify-content: space-between;
 
+    a:link, a:visited {
+        color: $primary-color;
+    }
+
     &__logo, &__list, .hamburger {
         margin: 0 1.5rem;
     }
