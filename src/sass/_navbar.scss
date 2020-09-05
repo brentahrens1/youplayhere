@@ -8,7 +8,9 @@
     width: 100%;
     min-width: 100vw;
     height: 5rem;
-    background: pink;
+    background: transparent;
+    color: $primary-color;
+    text-transform: uppercase;
     z-index: 999;
     @include flex-row;
     justify-content: space-between;
@@ -46,7 +48,8 @@
             left: 13rem;
             width: 245px;
             opacity: 0;
-            background: pink;
+            color: $primary-color;
+            background: $dropdown-background;
             padding: 1rem;
             transition: all 100ms ease-in-out;
 
@@ -61,15 +64,15 @@
     display: none;
     position: relative;
     width: 45px;
-    height: 20px;
+    height: 28px;
     cursor: pointer;
     z-index: 999;
 
     &__bar {
         position: absolute;
         left: 0;
-        width: 26px;
-        height: 2px;
+        width: 30px;
+        height: 3px;
         background: $primary-color;
         transition: $hamburger-transition;
 
@@ -116,7 +119,7 @@
     opacity: 0;
     width: 100%;
     height: 100vh;
-    background: #212121;
+    background: $dropdown-background;
     @include flex-column;
     transition: all 300ms ease-in-out;
 
