@@ -1,3 +1,5 @@
+@import './variables';
+
 // Flexbox
 
 @mixin flex-row {
@@ -50,4 +52,16 @@
     top: -.4rem;
     right: 1.5rem;
     display: block;
+}
+
+// page nav background
+
+@mixin page-nav-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: $sub-page-background;
+    z-index: 998;
 }

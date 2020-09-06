@@ -7,6 +7,7 @@ import { Switch, Route} from 'react-router-dom'
 import NavBar from './components/NavBar/NavBar'
 import Home from './components/Home/Home'
 import AboutYouPlayHere from './components/AboutYouPlayHere/AboutYouPlayHere'
+import Protagonist from './components/Protagonist/Protagonist'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/about-you-play-here" exact component={AboutYouPlayHere} />
+        <Route path="/protagonist" exact component={Protagonist} />
       </Switch>
     </div>
   );
