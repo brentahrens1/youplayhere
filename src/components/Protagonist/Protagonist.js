@@ -8,6 +8,7 @@ import Soccer from '../../assets/images/protagonist/soccer.jpg'
 const Protagonist = () => {
     return (
         <div className="protagonist">
+            <div className="page-nav-background" />
             <div className="protagonist__content">
                 <h2>Protagonist</h2>
                 <h3>Meet Hua Pan and the grannies from the MuLan Art Group, The New York Himalayan Cricket Clubs, and the Prospect Park soccer team & Alex Austin.</h3>

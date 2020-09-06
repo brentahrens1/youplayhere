@@ -4,6 +4,7 @@ import '../../sass/_you-play-here-about.scss'
 const AboutYouPlayHere = () => {
     return (
         <div className="play-about">
+            <div className="page-nav-background" />
             <div className="play-about__content">
                 <h2>What's You Play Here About?</h2>
                 <p>The project features an installation composed of an analogue map, made interactive with the use of an Augmented Reality (AR) application. This multifaceted project consists of a customized map of New York City’s public spaces where three different immigrant communities gather to collectively play a sport. The interactive aspect of the project is done between miniature models of these public spaces, and an augmented reality software called Aurasma, which includes documentary videos that appear on a smart device while navigating the map. The videos showcase three groups of immigrants in the United States, specifically New York City, highlighting their recreational activities, and how these activities connect to their immigration experience.</p>

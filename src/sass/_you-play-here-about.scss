@@ -1,4 +1,5 @@
 @import './variables';
+@import './mixins';
 
 .play-about {
     width: 100%;
@@ -6,6 +7,10 @@
     padding-top: 8rem;
     background: $sub-page-background;
     color: $primary-color;
+
+    .page-nav-background {
+        @include page-nav-background;
+    }
 
     &__content {
         width: 70%;
