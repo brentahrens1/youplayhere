@@ -12,14 +12,14 @@ const NavBar = () => {
     return (
         <div className="nav">
             <div className="nav__logo">
-                <h2>You Play Here</h2>
+                <h2><Link to="/">You Play Here</Link></h2>
             </div>
             <ul className="nav__list">
                 <li className="nav__list-item">Home</li>
                 <li className="nav__list-item dropdown-trigger">About
                     <ul className="nav__dropdown">
                         <li className="nav__dropdown-item"><Link to="/about-you-play-here">What's You Play Here?</Link></li>
-                        <li className="nav__dropdown-item">Protagonist</li>
+                        <li className="nav__dropdown-item"><Link to="protagonist">Protagonist</Link></li>
                         <li className="nav__dropdown-item">More about Ines / Contact</li>
                     </ul>
                 </li>
@@ -36,7 +36,7 @@ const NavBar = () => {
                     <li className={`overlay__item ${isMobileDropdown ? 'overlay__trigger-active' : 'overlay__trigger' }`} onClick={() => setMobileDropdown(!isMobileDropdown)}>About
                         <ul className={`overlay__dropdown ${isMobileDropdown ? 'overlay__dropdown-show' : ''}`}>
                             <li className="overlay__dropdown-item"><Link to="/about-you-play-here">What's You Play Here?</Link></li>
-                            <li className="overlay__dropdown-item">Protagonist</li>
+                            <li className="overlay__dropdown-item"><Link to="protagonist">Protagonist</Link></li>
                             <li className="overlay__dropdown-item">More about Ines / Contact</li>
                         </ul>
                     </li>
