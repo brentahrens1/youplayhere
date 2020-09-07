@@ -2,22 +2,20 @@
 @import './mixins';
 
 .protagonist {
-    width: 100%;
-    height: 100%;
-    background-color: $sub-page-background;
-    padding-top: 8rem;
-    padding-bottom: 2rem;
-    color: $primary-color;
+    @include sub-page-setup;
 
     .page-nav-background {
         @include page-nav-background;
     }
 
     &__content {
-        width: 70%;
-        margin: 0 auto;
+        @include sub-page-content;
 
-        h2, p, h3, image {
+        p {
+            font-size: $p;
+        }
+
+        h2:not(:nth-child(1)), p, h3, image {
             margin: 1.5rem auto;
         }
 
