@@ -1,11 +1,15 @@
 @import './variables';
 @import './mixins';
 
-.play-about {
+.contact {
     @include sub-page-setup;
 
     .page-nav-background {
         @include page-nav-background;
+    }
+
+    a:link, a:visited {
+        color: $primary-color;
     }
 
     &__content {
