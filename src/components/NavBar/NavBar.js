@@ -32,12 +32,12 @@ const NavBar = () => {
             </div>
             <div className={`overlay ${isOpen ? 'show' : ''}`}>
                 <ul className="overlay__list">
-                    <li className="overlay__item" onClick={() => setIsOpen(!isOpen)}><Link to="/">Home</Link></li>
+                    <li className="overlay__item"><Link to="/" onClick={() => setIsOpen(!isOpen)}>Home</Link></li>
                     <li className={`overlay__item ${isMobileDropdown ? 'overlay__trigger-active' : 'overlay__trigger' }`} onClick={() => setMobileDropdown(!isMobileDropdown)}>About
                         <ul className={`overlay__dropdown ${isMobileDropdown ? 'overlay__dropdown-show' : ''}`}>
-                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="/about-you-play-here">What's You Play Here?</Link></li>
-                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="protagonist">Protagonist</Link></li>
-                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="/contact">More about Ines / Contact</Link></li>
+                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="/about-you-play-here" onClick={() => setIsOpen(!isOpen)}>What's You Play Here?</Link></li>
+                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="protagonist" onClick={() => setIsOpen(!isOpen)}>Protagonist</Link></li>
+                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="/contact" onClick={() => setIsOpen(!isOpen)}>More about Ines / Contact</Link></li>
                         </ul>
                     </li>
                     <li className="overlay__item">News</li>
