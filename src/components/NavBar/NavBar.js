@@ -12,10 +12,10 @@ const NavBar = () => {
     return (
         <div className="nav">
             <div className="nav__logo">
-                <h2><Link to="/">You Play Here</Link></h2>
+                <h2><Link to="/play">You Play Here</Link></h2>
             </div>
             <ul className="nav__list">
-                <li className="nav__list-item">Home</li>
+                <li className="nav__list-item"><Link to="/">Home</Link></li>
                 <li className="nav__list-item dropdown-trigger">About
                     <ul className="nav__dropdown">
                         <li className="nav__dropdown-item"><Link to="/about-you-play-here">What's You Play Here?</Link></li>

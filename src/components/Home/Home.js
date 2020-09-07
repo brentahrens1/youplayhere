@@ -1,6 +1,8 @@
 import React from 'react'
 import '../../sass/_home.scss'
 
+import { Link } from 'react-router-dom'
+
 const Home = () => {
     return (
         <div className="home">
@@ -8,7 +10,7 @@ const Home = () => {
                 <div className="home__content">
                     <h1>You Play Here</h1>
                     <p>Interactive map and mini documentaries by Ines Vogelfang</p>
-                    <button>Play Here</button>
+                    <button><Link to="/play">Play Here</Link></button>
                 </div>
             </div>
             <div className="home__inner">
