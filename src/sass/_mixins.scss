@@ -82,3 +82,22 @@
     margin: 0 auto;
     line-height: 1.9;
 }
+
+// button 
+
+@mixin button {
+    width: 10rem;
+    background: transparent;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+    color: $primary-color;
+    padding: 1rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover, &:hover > a {
+        background: $primary-color;
+        color: $secondary-color;
+    }
+}
