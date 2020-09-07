@@ -10,7 +10,7 @@ const Home = () => {
                 <div className="home__content">
                     <h1>You Play Here</h1>
                     <p>Interactive map and mini documentaries by Ines Vogelfang</p>
-                    <button><Link to="/play">Play Here</Link></button>
+                    <button><Link to="/play">Play</Link></button>
                 </div>
             </div>
             <div className="home__inner">

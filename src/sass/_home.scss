@@ -46,11 +46,11 @@
                 border-radius: 5px;
                 color: $primary-color;
                 padding: 1rem;
-                font-size: 1.3rem;
+                font-size: 1.6rem;
                 text-transform: uppercase;
                 cursor: pointer;
 
-                &:hover {
+                &:hover, &:hover > a {
                     background: $primary-color;
                     color: $secondary-color;
                 }
