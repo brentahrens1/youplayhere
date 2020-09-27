@@ -10,11 +10,11 @@ import sunset from '../../assets/images/symbols/sunset.png'
 
 // maps
 
-import brooklyn from '../../assets/images/maps/ Brooklyn.png'
-import chinatown from '../../assets/images/maps/ Chinatown.png'
-import eastRiver from '../../assets/images/maps/ East_River.png'
-import queens from '../../assets/images/maps/ Queens.png'
-import uptown from '../../assets/images/maps/ Uptown.png'
+import brooklyn from '../../assets/images/maps/_Brooklyn02.png'
+import chinatown from '../../assets/images/maps/_Chinatown02.png'
+import eastRiver from '../../assets/images/maps/_East_River_02.png'
+import queens from '../../assets/images/maps/_Queens_02.png'
+import uptown from '../../assets/images/maps/_Uptown_02.png'
 
 
 const PlayHere = () => {
