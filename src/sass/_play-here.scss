@@ -47,5 +47,30 @@
             grid-column: 7 / span 3;
             grid-row: 5 / span 3;
         }
+
+        .symbol {
+            width: 60%;
+            cursor: pointer;
+            transition: transform .2s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        .symbol-one {
+            grid-column: 7 / span 1;
+            grid-row: 1 / span 1; 
+        }
+
+        .symbol-two {
+            grid-column: 6 / span 1;
+            grid-row: 2 / span 1; 
+        }
+
+        .symbol-three {
+            grid-column: 2 / span 1;
+            grid-row: 4 / span 1;
+        }
     }
 }
