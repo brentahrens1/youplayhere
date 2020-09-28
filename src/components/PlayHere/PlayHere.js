@@ -14,7 +14,6 @@ import globe from '../../assets/images/symbols/globe.png'
 import location from '../../assets/images/symbols/Location.png'
 import music from '../../assets/images/symbols/music (2).png'
 import pigeon from '../../assets/images/symbols/Pigeon.png'
-import pizza from '../../assets/images/symbols/pizza.png'
 import rat from '../../assets/images/symbols/rat.png'
 import sunset from '../../assets/images/symbols/sunset-park-bid_0.jpg'
 
@@ -84,6 +83,9 @@ const PlayHere = () => {
                 </div>
                 <div className="play__grid-piece symbol symbol-thirteen">
                     <img src={location} alt="Uptown" />
+                </div>
+                <div className="play__grid-piece symbol symbol-fourteen">
+                    <img src={sunset} alt="Uptown" />
                 </div>
             </div>
         </div>
