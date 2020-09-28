@@ -41,6 +41,11 @@ const PlayHere = () => {
         console.log(showVid)
     }
 
+    const handleClear = () => {
+        setShowVid(!showVid)
+        setCurrentVid('')
+    }
+
     return (
         <div className="play">
             <div className="play__grid">
@@ -109,7 +114,7 @@ const PlayHere = () => {
                             </>
                         )
                     }
-                    <div className="close" onClick={() => setShowVid(!showVid)}>
+                    <div className="close" onClick={handleClear}>
                         <div className="close__bar" />
                         <div className="close__bar" />
                     </div>
