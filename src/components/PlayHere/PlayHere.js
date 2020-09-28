@@ -27,12 +27,19 @@ import uptown from '../../assets/images/maps/_Uptown_02.png'
 
 //videos 
 
-import video from '../../assets/videos/Aura_01.mp4'
+import { videos } from '../../const/video'
 
 
 const PlayHere = () => {
     const [ showVid, setShowVid ] = useState(false)
-    const [ showOverlay, setShowOverlay ] = useState(false)
+    const [currentVid, setCurrentVid] = useState("")
+
+    const handleClick = (e) => {
+        setShowVid(true)
+        setCurrentVid(e.target.id)
+        console.log(e.target.id)
+        console.log(showVid)
+    }
 
     return (
         <div className="play">
@@ -52,54 +59,56 @@ const PlayHere = () => {
                 <div className="play__grid-piece five">
                     <img src={uptown} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-one" onClick={() => setShowVid(!showVid)}>
-                    <img src={cricketBug} alt="Uptown" />
+                <div className="play__grid-piece symbol symbol-one">
+                    <img id="1" onClick={handleClick} src={cricketBug} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-two">
-                    <img src={cricketWhite} alt="Uptown" />
+                    <img id="2" onClick={handleClick} src={cricketWhite} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-three">
-                    <img src={squirrel} alt="Uptown" />
+                    <img id="3" onClick={handleClick} src={squirrel} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-four">
-                    <img src={apple} alt="Uptown" />
+                    <img id="4" onClick={handleClick} src={apple} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-five">
-                    <img src={rat} alt="Uptown" />
+                    <img id="5" onClick={handleClick} src={rat} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-six">
-                    <img src={music} alt="Uptown" />
+                    <img id="6" onClick={handleClick} src={music} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-seven">
-                    <img src={pigeon} alt="Uptown" />
+                    <img id="7" onClick={handleClick} src={pigeon} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-eight">
-                    <img src={bridge} alt="Uptown" />
+                    <img id="8" onClick={handleClick} src={bridge} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-nine">
-                    <img src={location} alt="Uptown" />
+                    <img id="9" onClick={handleClick} src={location} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-ten">
-                    <img src={cup} alt="Uptown" />
+                    <img id="10" onClick={handleClick} src={cup} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-eleven">
-                    <img src={globe} alt="Uptown" />
+                    <img id="11" onClick={handleClick} src={globe} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-twelve">
-                    <img src={bench} alt="Uptown" />
+                    <img id="12" onClick={handleClick} src={bench} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-thirteen">
-                    <img src={location} alt="Uptown" />
+                    <img id="13" onClick={handleClick} src={location} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-fourteen">
-                    <img src={sunset} alt="Uptown" />
+                    <img id="14" onClick={handleClick} src={sunset} alt="Uptown" />
                 </div>
-                <div className={`${showVid ? 'overlay-show' : 'overlay-hide'}`}>
-                    <div className="video-one">
-                        <video controls autoPlay className='video-show'>
-                            <source src={video} type="video/mp4" />
-                        </video>
-                    </div>
+                <div className={showVid ? 'overlay-show' : 'overlay-hide'}>
+                    {
+                        videos.map(video => 
+                            <>
+                                {currentVid === video.id ? video.video : null}
+                            </>
+                        )
+                    }
                     <div className="close" onClick={() => setShowVid(!showVid)}>
                         <div className="close__bar" />
                         <div className="close__bar" />
