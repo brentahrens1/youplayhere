@@ -13,7 +13,7 @@
         height: 100%;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
-        grid-template-rows: repeat(9, 100px);
+        grid-template-rows: repeat(8, 100px);
 
         .play__grid-piece {
             width: 100%;
@@ -49,7 +49,7 @@
         }
 
         .symbol {
-            width: 50%;
+            width: 40%;
             cursor: pointer;
             transition: transform .2s ease-in-out;
 
@@ -74,6 +74,83 @@
             grid-column: 2 / span 1;
             grid-row: 4 / span 1;
             align-self: end;
+        }
+
+        .symbol-four {
+            grid-column: 3 / span 1;
+            grid-row: 3 / span 1;
+            align-self: center;
+            width: 30%;
+        }
+
+        .symbol-five {
+            grid-column: 3 / span 1;
+            grid-row: 4 / span 1;
+            justify-self: end;
+            align-self: center;
+        }
+
+        .symbol-six {
+            grid-column: 1 / span 1;
+            grid-row: 7 / span 1;
+            align-self: center;
+        }
+
+        .symbol-seven {
+            grid-column: 1 / span 1;
+            grid-row: 4 / span 1;
+            align-self: center;
+        }
+
+        .symbol-eight {
+            grid-column: 5 / span 1;
+            grid-row: 6 / span 1;
+            align-self: center;
+            z-index: 999;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+        }
+
+        .symbol-nine {
+            grid-column: 6 / span 1;
+            grid-row: 5 / span 1;
+            align-self: start;
+            justify-self: center;
+            width: 20%;
+        }
+
+        .symbol-ten {
+            grid-column: 8 / span 1;
+            grid-row: 3 / span 1;
+            align-self: end;
+            justify-self: end;
+            width: 30%;
+        }
+
+        .symbol-eleven {
+            grid-column: 9 / span 1;
+            grid-row: 1 / span 1;
+            justify-self: end;
+            align-self: center;
+            width: 30%;
+        }
+
+        .symbol-twelve {
+            grid-column: 1 / span 1;
+            grid-row: 5 / span 1;
+            align-self: center;
+            justify-self: end;
+            transform: rotate(15deg);
+        }
+
+        .symbol-thirteen {
+            grid-column: 8 / span 1;
+            grid-row: 7 / span 1;
+            align-self: start;
+            justify-self: end;
+            transform: rotate(180deg);
+            width: 23%;
         }
     }
 }
