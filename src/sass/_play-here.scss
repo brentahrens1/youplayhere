@@ -51,10 +51,14 @@
         .symbol {
             width: 40%;
             cursor: pointer;
-            transition: transform .2s ease-in-out;
+            transition: transform .1s ease-in-out;
 
             &:hover {
                 transform: scale(1.1);
+            }
+
+            &:active {
+                transform: scale(1.0);
             }
         }
 
@@ -159,6 +163,62 @@
             align-self: end;
             justify-self: center;
             width: 50%;
+        }
+
+        .overlay-hide {
+            display: none;
+        }
+
+        .overlay-show {
+            width: 100%;
+            height: 100vh;
+            background: rgba(0,0,0,0.6);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+
+            .close {
+                position: absolute;
+                top: 2.5rem;
+                right: 4rem;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                transition: transform 1s ease-in-out;
+
+                &__bar {
+                    position: absolute;
+                    top: 1.4rem;
+                    left: 0;
+                    height: 5px;
+                    width: 50px;
+                    background: #fff;
+
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                    }
+
+                    &:nth-child(2) {
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+
+            .video-one {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 50%;
+    
+                .video-show {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            
+            
         }
     }
 }

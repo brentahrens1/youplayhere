@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../../sass/_play-here.scss'
 
 // symbols
@@ -25,8 +25,15 @@ import eastRiver from '../../assets/images/maps/_East_River_02.png'
 import queens from '../../assets/images/maps/_Queens_02.png'
 import uptown from '../../assets/images/maps/_Uptown_02.png'
 
+//videos 
+
+import video from '../../assets/videos/Aura_01.mp4'
+
 
 const PlayHere = () => {
+    const [ showVid, setShowVid ] = useState(false)
+    const [ showOverlay, setShowOverlay ] = useState(false)
+
     return (
         <div className="play">
             <div className="play__grid">
@@ -45,7 +52,7 @@ const PlayHere = () => {
                 <div className="play__grid-piece five">
                     <img src={uptown} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-one">
+                <div className="play__grid-piece symbol symbol-one" onClick={() => setShowVid(!showVid)}>
                     <img src={cricketBug} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-two">
@@ -86,6 +93,17 @@ const PlayHere = () => {
                 </div>
                 <div className="play__grid-piece symbol symbol-fourteen">
                     <img src={sunset} alt="Uptown" />
+                </div>
+                <div className={`${showVid ? 'overlay-show' : 'overlay-hide'}`}>
+                    <div className="video-one">
+                        <video controls autoPlay className='video-show'>
+                            <source src={video} type="video/mp4" />
+                        </video>
+                    </div>
+                    <div className="close" onClick={() => setShowVid(!showVid)}>
+                        <div className="close__bar" />
+                        <div className="close__bar" />
+                    </div>
                 </div>
             </div>
         </div>
