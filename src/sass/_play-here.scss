@@ -224,75 +224,135 @@
     }
 }
 
-@media (max-width: 1160px) {
-    .play {
-    
-        &__grid {
-            grid-template-rows: repeat(8, 80px);
-        }
-    } 
-}
-
 @media (max-width: 1000px) {
     .play {
     
         &__grid {
-            grid-template-rows: repeat(8, 70px);
-
+            grid-template-rows: repeat(8, 100px);
+    
+            .symbol {
+                width: 40%;
+            }
+    
+            .symbol-one {
+                grid-column: 6 / span 1;
+                grid-row: 2 / span 1; 
+                justify-self: end;
+            }
+    
+            .symbol-two {
+                grid-column: 7 / span 1;
+                grid-row: 1 / span 1; 
+                justify-self: end;
+            }
+    
+            .symbol-three {
+                grid-column: 2 / span 1;
+                grid-row: 4 / span 1;
+                align-self: end;
+            }
+    
+            .symbol-four {
+                grid-row: 2 / span 1;
+                align-self: end;
+                width: 30%;
+            }
+    
+            .symbol-five {
+                grid-column: 3 / span 1;
+                grid-row: 4 / span 1;
+                justify-self: end;
+                align-self: center;
+            }
+    
+            .symbol-six {
+                grid-column: 1 / span 1;
+                grid-row: 7 / span 1;
+                align-self: start;
+            }
+    
+            .symbol-seven {
+                grid-column: 1 / span 1;
+                grid-row: 4 / span 1;
+                align-self: center;
+            }
+    
+            .symbol-eight {
+                grid-column: 5 / span 1;
+                grid-row: 4 / span 1;
+                align-self: center;
+                z-index: 999;
+                width: 100%;
+                align-self: end;
+                justify-self: center;
+            }
+    
+            .symbol-nine {
+                grid-column: 6 / span 1;
+                grid-row: 5 / span 1;
+                align-self: start;
+                justify-self: center;
+                width: 20%;
+            }
+    
+            .symbol-ten {
+                grid-column: 8 / span 1;
+                grid-row: 3 / span 1;
+                align-self: start;
+                justify-self: end;
+                width: 30%;
+            }
+    
+            .symbol-eleven {
+                grid-column: 9 / span 1;
+                grid-row: 1 / span 1;
+                justify-self: end;
+                align-self: center;
+                width: 30%;
+            }
+    
+            .symbol-twelve {
+                grid-column: 1 / span 1;
+                grid-row: 5 / span 1;
+                align-self: center;
+                justify-self: end;
+                transform: rotate(15deg);
+            }
+    
+            .symbol-thirteen {
+                grid-column: 8 / span 1;
+                grid-row: 6 / span 1;
+                align-self: end;
+                justify-self: end;
+                transform: rotate(180deg);
+                width: 23%;
+            }
+    
+            .symbol-fourteen {
+                grid-column: 7 / span 1;
+                grid-row: 5 / span 1;
+                align-self: start;
+                justify-self: center;
+                width: 50%;
+            }
         }
-        .play__grid .overlay-show .video-one {
-            top: 40%;
-        }
-
-    } 
+    }
 }
 
 @media (max-width: 850px) {
-    .play {
-    
-        &__grid {
-            grid-template-rows: repeat(8, 60px);
-        }
 
-        .play__grid .overlay-show .video-one {
-            top: 35%;
-        }
-    } 
 }
 
 @media (max-width: 700px) {
-    .play {
-    
-        &__grid {
-            grid-template-rows: repeat(8, 50px);
-        }
 
-        .play__grid .overlay-show .video-one {
-            top: 30%;
-        }
-    } 
 }
 
 @media (max-width: 550px) {
-    .play {
-    
-        &__grid {
-            grid-template-rows: repeat(8, 40px);
-        }
 
-        .play__grid .overlay-show .video-one {
-            top: 25%;
-        }
-    } 
 }
 
 @media (max-width: 400px) {
-    .play {
-    
-        &__grid {
-            grid-template-rows: repeat(8, 25px);
-        }
-    } 
+
 }
 
 
