@@ -196,10 +196,12 @@
 
                     &:nth-child(1) {
                         transform: rotate(45deg);
+                        animation: rotate1 .3s ease-in-out;
                     }
 
                     &:nth-child(2) {
                         transform: rotate(-45deg);
+                        animation: rotate2 .3s ease-in-out;
                     }
                 }
             }
@@ -310,4 +312,23 @@
             grid-template-rows: repeat(8, 140px);
         }
     } 
+}
+
+
+@keyframes rotate1 {
+    from  {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes rotate2 {
+    from  {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg);
+    }
 }
