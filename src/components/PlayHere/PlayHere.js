@@ -13,9 +13,10 @@ import cup from '../../assets/images/symbols/cup.png'
 import globe from '../../assets/images/symbols/globe.png'
 import location from '../../assets/images/symbols/Location.png'
 import music from '../../assets/images/symbols/music (2).png'
-import pigeon from '../../assets/images/symbols/Pigeon.png'
-import rat from '../../assets/images/symbols/rat.png'
+import pigeon from '../../assets/images/symbols/PigeonS.png'
+import rat from '../../assets/images/symbols/pizza_Rat.png'
 import sunset from '../../assets/images/symbols/sunset-park-bid_0.jpg'
+import extraBushes from '../../assets/images/symbols/arbolito.png'
 
 // maps
 
@@ -63,6 +64,9 @@ const PlayHere = () => {
                 </div>
                 <div className="play__grid-piece five">
                     <img src={uptown} alt="Uptown" />
+                </div>
+                <div className="play__grid-piece six">
+                    <img src={extraBushes} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-one">
                     <img id="1" onClick={handleClick} src={cricketBug} alt="Uptown" />

@@ -23,6 +23,11 @@
             }
         }
 
+        .six {
+            grid-column: 6 / span 1;
+            grid-row: 1 / 2;
+        }
+
         .five {
             grid-column: 1 / span 3;
             grid-row: 1 / 3;
