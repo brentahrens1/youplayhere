@@ -112,10 +112,10 @@ const PlayHere = () => {
                 </div>
                 <div className={showVid ? 'overlay-show' : 'overlay-hide'}>
                     {
-                        videos.map(video => 
-                            <>
+                        videos.map((video, idx) => 
+                            <div key={idx}>
                                 {currentVid === video.id ? video.video : null}
-                            </>
+                            </div>
                         )
                     }
                     <div className="close" onClick={handleClear}>
