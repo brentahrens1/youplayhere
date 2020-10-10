@@ -4,10 +4,6 @@ import '../../sass/_navbar.scss'
 import { Link } from 'react-router-dom'
 
 const NavBar = () => {
-    const [ isOpen, setIsOpen ] = useState(false)
-    const [ isMobileDropdown, setMobileDropdown ] = useState(false)
-
-    window.onresize = () => (window.innerWidth > 650 && isOpen) && setIsOpen(false)
 
     return (
         <div className="nav">
@@ -15,30 +11,8 @@ const NavBar = () => {
                 <h2><Link to="/play">You Play Here</Link></h2>
             </div>
             <ul className="nav__list">
-                <li className="nav__list-item dropdown-trigger">About
-                    <ul className="nav__dropdown">
-                        <li className="nav__dropdown-item"><Link to="/about-you-play-here">What's You Play Here?</Link></li>
-                        <li className="nav__dropdown-item"><Link to="/protagonist">Protagonist</Link></li>
-                        <li className="nav__dropdown-item"><Link to="/contact">More about Ines / Contact</Link></li>
-                    </ul>
-                </li>
+                <li className="nav__list-item dropdown-trigger">More</li>
             </ul>
-            <div className={`hamburger ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-                <div className="hamburger__bar" />
-                <div className="hamburger__bar" />
-                <div className="hamburger__bar" />
-            </div>
-            <div className={`overlay ${isOpen ? 'show' : ''}`}>
-                <ul className="overlay__list">
-                    <li className={`overlay__item ${isMobileDropdown ? 'overlay__trigger-active' : 'overlay__trigger' }`} onClick={() => setMobileDropdown(!isMobileDropdown)}>About
-                        <ul className={`overlay__dropdown ${isMobileDropdown ? 'overlay__dropdown-show' : ''}`}>
-                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="/about-you-play-here" onClick={() => setIsOpen(!isOpen)}>What's You Play Here?</Link></li>
-                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="protagonist" onClick={() => setIsOpen(!isOpen)}>Protagonist</Link></li>
-                            <li className="overlay__dropdown-item" onClick={() => setIsOpen(!isOpen)}><Link to="/contact" onClick={() => setIsOpen(!isOpen)}>More about Ines / Contact</Link></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
         </div>
     )
 }

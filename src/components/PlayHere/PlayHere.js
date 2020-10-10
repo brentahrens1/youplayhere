@@ -17,6 +17,9 @@ import pigeon from '../../assets/images/symbols/PigeonS.png'
 import rat from '../../assets/images/symbols/pizza_Rat.png'
 import sunset from '../../assets/images/symbols/sunset-park-bid_0.jpg'
 import extraBushes from '../../assets/images/symbols/arbolito.png'
+import projectCredits from '../../assets/images/symbols/project-credits.png'
+import startHere from '../../assets/images/symbols/start-here.png'
+import sunsetBack from '../../assets/images/symbols/sunset.png'
 
 // maps
 
@@ -93,7 +96,7 @@ const PlayHere = () => {
                     <img id="8" onClick={handleClick} src={bridge} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-nine">
-                    <img id="9" onClick={handleClick} src={location} alt="Uptown" />
+                    <img id="9" onClick={handleClick} src={startHere} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-ten">
                     <img id="10" onClick={handleClick} src={cup} alt="Uptown" />
@@ -105,10 +108,13 @@ const PlayHere = () => {
                     <img id="12" onClick={handleClick} src={bench} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-thirteen">
-                    <img id="13" onClick={handleClick} src={location} alt="Uptown" />
+                    <img id="13" onClick={handleClick} src={projectCredits} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-fourteen">
                     <img id="14" onClick={handleClick} src={sunset} alt="Uptown" />
+                </div>
+                <div className="play__grid-piece symbol symbol-fifthteen">
+                    <img id="14" onClick={handleClick} src={sunsetBack} alt="Uptown" />
                 </div>
                 <div className={showVid ? 'overlay-show' : 'overlay-hide'}>
                     {
