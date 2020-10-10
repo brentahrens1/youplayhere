@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import '../../sass/_play-here.scss'
 
 // symbols
@@ -11,7 +11,6 @@ import bench from '../../assets/images/symbols/bench.png'
 import bridge from '../../assets/images/symbols/bridge.png'
 import cup from '../../assets/images/symbols/cup.png'
 import globe from '../../assets/images/symbols/globe.png'
-import location from '../../assets/images/symbols/Location.png'
 import music from '../../assets/images/symbols/music (2).png'
 import pigeon from '../../assets/images/symbols/PigeonS.png'
 import rat from '../../assets/images/symbols/pizza_Rat.png'
@@ -33,10 +32,14 @@ import uptown from '../../assets/images/maps/_Uptown_02.png'
 
 import { videos } from '../../const/video'
 
+import landingAudio from '../../assets/audio/nyc-landing.mp3'
+
+import ReactAudioPlayer from 'react-audio-player';
 
 const PlayHere = () => {
     const [ showVid, setShowVid ] = useState(false)
     const [currentVid, setCurrentVid] = useState("")
+    const [ audio, setAudio ] = useState(null)
 
     const handleClick = (e) => {
         setShowVid(true)
@@ -50,8 +53,17 @@ const PlayHere = () => {
         setCurrentVid('')
     }
 
+    useEffect(() => {
+        setAudio( <ReactAudioPlayer
+            src={landingAudio}
+            autoPlay
+            loop
+        />)
+    }, [])
+
     return (
         <div className="play">
+            {audio}
             <div className="play__grid">
                 <div className="play__grid-piece one">
                     <img src={brooklyn} alt="Brooklyn" />
