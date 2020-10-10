@@ -19,7 +19,7 @@
 
         .home__content {
             @include center;
-            width: 50%;
+            width: 300px;
             min-width: 600px;
             color: $primary-color;
             text-align: center;
@@ -27,30 +27,42 @@
             h1, p {
                 margin: 0;
             }
-
+            
             h1 {
+                animation: moveDown 1s ease-in;
                 font-size: $h1;
                 text-transform: uppercase;
+                line-height: 1;
+            }
+
+            h2 {
+                animation: moveRight 1s ease-in;
             }
 
             p {
-                font-size: 1.8rem;
-                line-height: 1.9;
+                font-size: 1.2rem;
+                line-height: 1.2;
                 margin-bottom: 1rem;
+                animation: moveLeft 1s ease-in;
             }
 
             button {
                 @include button;
+                animation: moveUp 1s ease-in;
             }
         }
     }
 
     &__inner {
-        width: 100%;
-        height: 100%;
-        background-image: url('../assets/images/backdrop.JPG');
-        @include background-images;
-        transform: scale(1.2);
+        .landing-video {
+            position: fixed;
+            object-fit: cover;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            min-width: 100%;
+            min-height: 100%;
+        }
     }
 }
 
@@ -72,3 +84,60 @@
         }
     }
 }
+
+@keyframes moveDown {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(200px);
+        opacity: 0;
+    }
+    80% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
