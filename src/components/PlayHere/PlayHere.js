@@ -46,11 +46,20 @@ const PlayHere = () => {
         setCurrentVid(e.target.id)
         console.log(e.target.id)
         console.log(showVid)
+        setAudio(<ReactAudioPlayer
+            src={landingAudio}
+            muted
+        />)
     }
 
     const handleClear = () => {
         setShowVid(!showVid)
         setCurrentVid('')
+        setAudio( <ReactAudioPlayer
+            src={landingAudio}
+            autoPlay
+            loop
+        />)
     }
 
     useEffect(() => {
