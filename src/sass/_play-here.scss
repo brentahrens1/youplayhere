@@ -22,10 +22,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: $primary-color;
-            font-size: 2rem;
+            font-size: 80px;
             text-transform: uppercase;
             opacity: 0;
             white-space: nowrap;
+            z-index: 1;
             animation: title 2s ease-out;
         }
 
@@ -75,6 +76,7 @@
 
         .symbol {
             width: 40%;
+            z-index: 2;
             cursor: pointer;
             transition: transform .1s ease-in-out;
 
@@ -102,8 +104,8 @@
         }
 
         .symbol-three {
-            grid-column: 2 / span 1;
-            grid-row: 4 / span 1;
+            grid-column: 4 / span 1;
+            grid-row: 6 / span 1;
             align-self: end;
             animation: slideLeft 2s ease-in;
         }
@@ -277,6 +279,11 @@
     .play {
         padding-top: 6rem;
         &__grid {
+
+            .intro-text {
+                font-size: 50px;
+            }
+
             grid-template-rows: repeat(8, 100px);
     
             .symbol {
@@ -296,8 +303,8 @@
             }
     
             .symbol-three {
-                grid-column: 2 / span 1;
-                grid-row: 4 / span 1;
+                grid-column: 4 / span 1;
+                grid-row: 6 / span 1;
                 align-self: end;
             }
     
@@ -399,6 +406,11 @@
     .play {
         padding-top: 5rem;
         &__grid {
+
+            .intro-text {
+                font-size: 30px;
+            }
+
             grid-template-rows: repeat(8, 100px);
 
             .three {
@@ -423,9 +435,9 @@
             }
     
             .symbol-three {
-                grid-column: 2 / span 1;
-                grid-row: 4 / span 1;
-                align-self: end;
+                grid-column: 4 / span 1;
+                grid-row: 6 / span 1;
+                align-self: flex-start;
             }
     
             .symbol-four {
@@ -575,36 +587,43 @@
             .symbol-one {
                 order: 9;
                 animation: none;
+                width: 40%;
             }
     
             .symbol-two {
                 order: 11;
+                width: 35%;
                 animation: none;
             }
     
             .symbol-three {
                 order: 4;
+                width: 35%;
                 animation: none;
             }
     
             .symbol-four {
                 order: 8;
+                width: 30%;
                 animation: none;
             }
     
             .symbol-five {
                 order: 3;
+                width: 40%;
                 animation: none;
             }
     
             .symbol-six {
                 order: 5;
+                width: 35%;
                 animation: none;
             }
     
             .symbol-seven {
                 order: 7;
                 animation: none;
+                width: 40%;
             }
     
             .symbol-eight {
@@ -620,17 +639,20 @@
     
             .symbol-ten {
                 order: 12;
+                width: 35%;
                 animation: none;
             }
     
             .symbol-eleven {
                 order: 10;
+                width: 35%;
                 animation: none;
             }
     
             .symbol-twelve {
                 order: 6;
                 animation: none;
+                width: 40%;
             }
     
             .symbol-thirteen {

@@ -11,7 +11,7 @@ const NavBar = () => {
                 <h2><Link to="/play">You Play Here</Link></h2>
             </div>
             <ul className="nav__list">
-                <li className="nav__list-item dropdown-trigger">More</li>
+                <li className="nav__list-item dropdown-trigger"><Link to="/more">More</Link></li>
             </ul>
         </div>
     )
