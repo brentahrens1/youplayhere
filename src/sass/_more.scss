@@ -110,3 +110,13 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 800px) {
+    .more {
+    
+        .contact-form {
+            width: calc(100% - 2rem);
+            max-width: 100%;
+        }
+    }
+}

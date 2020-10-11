@@ -23,7 +23,7 @@ const Home = () => {
     return (
         <div className="home">
             {audio}
-            <div className="home__overlay">
+            <div className="home__inner">
                 <div className="home__content">
                     <h1>You Play Here</h1>
                     <h2>Ines Vogelfang | Interactive Map</h2>
@@ -35,8 +35,6 @@ const Home = () => {
                     </p>
                     <button><h2><Link to="/play">Play Here</Link></h2></button>
                 </div>
-            </div>
-            <div className="home__inner">
                 <video autoPlay muted loop className="landing-video">
                     <source src={landingVideo} type="video/mp4" />
                 </video>

@@ -13,16 +13,17 @@
         }
     }
 
-    &__overlay {
-        @include fullscreen-fixed;
-        background-color: $overlay-color;
-
+    
+    &__inner {
         .home__content {
+    
             @include center;
             width: 300px;
             min-width: 600px;
             color: $primary-color;
             text-align: center;
+            z-index: 2;
+    
             
             h1, p {
                 margin: 0;
@@ -33,27 +34,26 @@
                 font-size: $h1;
                 text-transform: uppercase;
                 line-height: 1;
+                mix-blend-mode: overlay;
             }
-
+    
             h2 {
                 animation: moveRight 1s ease-in;
             }
-
+    
             p {
                 font-size: 1.2rem;
                 line-height: 1.2;
                 margin-bottom: 1rem;
                 animation: moveLeft 1s ease-in;
             }
-
+    
             button {
                 @include button;
                 animation: moveUp 1s ease-in;
             }
         }
-    }
 
-    &__inner {
         .landing-video {
             position: fixed;
             object-fit: cover;
