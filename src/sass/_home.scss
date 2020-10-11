@@ -19,9 +19,11 @@
     
             @include center;
             width: 300px;
-            min-width: 600px;
+            min-width: 680px;
             color: $primary-color;
             text-align: center;
+            background: rgba(0,0,0,0.4);
+            padding: 2rem;
             z-index: 2;
     
             
@@ -34,7 +36,6 @@
                 font-size: $h1;
                 text-transform: uppercase;
                 line-height: 1;
-                mix-blend-mode: overlay;
             }
     
             h2 {
