@@ -128,6 +128,9 @@ const PlayHere = () => {
                 <div className="play__grid-piece symbol symbol-fifthteen">
                     <img id="14" onClick={handleClick} src={sunsetBack} alt="Uptown" />
                 </div>
+                <div className="intro-text">
+                    <h1>You Play Here</h1>
+                </div>
                 <div className={showVid ? 'overlay-show' : 'overlay-hide'}>
                     {
                         videos.map((video, idx) => 

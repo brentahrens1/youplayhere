@@ -16,6 +16,18 @@
         grid-template-columns: repeat(9, 1fr);
         grid-template-rows: repeat(8, 100px);
 
+        .intro-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: $primary-color;
+            font-size: 2rem;
+            text-transform: uppercase;
+            opacity: 0;
+            animation: title 2s ease-out;
+        }
+
         .play__grid-piece {
             width: 100%;
 
@@ -589,5 +601,14 @@
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@keyframes title {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

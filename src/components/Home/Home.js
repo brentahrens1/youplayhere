@@ -33,7 +33,7 @@ const Home = () => {
                        project you'll hear me trying to find the answer while you navigate 
                        through a made up map of New York City's public spaces
                     </p>
-                    <button><h2><Link to="/play">Play Here &#62;&#62;</Link></h2></button>
+                    <button><h2><Link to="/play">Play Here</Link></h2></button>
                 </div>
             </div>
             <div className="home__inner">
