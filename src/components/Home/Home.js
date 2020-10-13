@@ -1,28 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../../sass/_home.scss'
 
 import { Link } from 'react-router-dom'
 
 import landingVideo from '../../assets/LandingVideo/landing.mp4'
 
-import landingAudio from '../../assets/audio/nyc-landing.mp3'
-
-import ReactAudioPlayer from 'react-audio-player';
-
-
 const Home = () => {
-    const [ audio, setAudio ] = useState(null)
-
-    useEffect(() => {
-        setAudio( <ReactAudioPlayer
-            src={landingAudio}
-            autoPlay
-        />)
-    }, [])
 
     return (
         <div className="home">
-            {audio}
             <div className="home__inner">
                 <div className="home__content">
                     <h1>You Play Here</h1>

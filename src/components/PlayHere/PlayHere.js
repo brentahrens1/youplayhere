@@ -34,6 +34,8 @@ import { videos } from '../../const/video'
 
 import landingAudio from '../../assets/audio/nyc-landing.mp3'
 
+import landingVideo from '../../assets/LandingVideo/landing.mp4'
+
 import ReactAudioPlayer from 'react-audio-player';
 
 const PlayHere = () => {
