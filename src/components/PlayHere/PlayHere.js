@@ -43,6 +43,7 @@ const PlayHere = () => {
     const [currentVid, setCurrentVid] = useState("")
     const [ audio, setAudio ] = useState(null)
     const [ isActive, setIsActive ] = useState(14)
+    const [ stopBounce, setStopBounce ] = useState(true)
 
     const handleClick = (e) => {
         setShowVid(true)
@@ -51,6 +52,7 @@ const PlayHere = () => {
             src={landingAudio}
             muted
         />)
+        setStopBounce(!stopBounce)
     }
 
     const handleClear = (e) => {
@@ -62,6 +64,7 @@ const PlayHere = () => {
             loop
             muted
         />)
+        setStopBounce(!stopBounce)
         setIsActive(isActive - 1)
     }
 
@@ -96,46 +99,46 @@ const PlayHere = () => {
                 <div className="play__grid-piece six">
                     <img src={extraBushes} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-one ${isActive == 14 ? "active-14" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-one ${stopBounce && isActive == 14 ? "active-14" : ''}`}>
                     <img id="14" onClick={handleClick} src={startHere} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-two ${isActive == 13 ? "active-13" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-two ${stopBounce && isActive == 13 ? "active-13" : ''}`}>
                     <img id="13" onClick={handleClick} src={bridge} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-three ${isActive == 12 ? "active-12" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-three ${stopBounce && isActive == 12 ? "active-12" : ''}`}>
                     <img id="12" onClick={handleClick} src={squirrel} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-four ${isActive == 11 ? "active-11" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-four ${stopBounce && isActive == 11 ? "active-11" : ''}`}>
                     <img id="11" onClick={handleClick} src={rat} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-five ${isActive == 10 ? "active-10" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-five ${stopBounce && isActive == 10 ? "active-10" : ''}`}>
                     <img id="10" onClick={handleClick} src={music} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-six ${isActive == 9 ? "active-9" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-six ${stopBounce && isActive == 9 ? "active-9" : ''}`}>
                     <img id="9" onClick={handleClick} src={bench} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-seven ${isActive == 8 ? "active-8" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-seven ${stopBounce && isActive == 8 ? "active-8" : ''}`}>
                     <img id="8" onClick={handleClick} src={pigeon} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-eight ${isActive == 7 ? "active-7" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-eight ${stopBounce && isActive == 7 ? "active-7" : ''}`}>
                     <img id="7" onClick={handleClick} src={apple} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-nine ${isActive ==  6 ? "active-6" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-nine ${stopBounce && isActive ==  6 ? "active-6" : ''}`}>
                     <img id="6" onClick={handleClick} src={cricketBug} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-ten ${isActive == 5 ? "active-5" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-ten ${stopBounce && isActive == 5 ? "active-5" : ''}`}>
                     <img id="5" onClick={handleClick} src={cricketWhite} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-eleven ${isActive == 4 ? "active-4" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-eleven ${stopBounce && isActive == 4 ? "active-4" : ''}`}>
                     <img id="4" onClick={handleClick} src={globe} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-twelve ${isActive == 3 ? "active-3" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-twelve ${stopBounce && isActive == 3 ? "active-3" : ''}`}>
                     <img id="3" onClick={handleClick} src={cup} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-thirteen ${isActive == 2 ? "active-2" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-thirteen ${stopBounce && isActive == 2 ? "active-2" : ''}`}>
                     <img id="2" onClick={handleClick} src={sunsetBack} alt="Uptown" />
                 </div>
-                <div className={`play__grid-piece symbol symbol-fourteen ${isActive == 1 ? "active-1" : ''}`}>
+                <div className={`play__grid-piece symbol symbol-fourteen ${stopBounce && isActive == 1 ? "active-1" : ''}`}>
                     <img id="1" onClick={handleClick} src={projectCredits} alt="Uptown" />
                 </div>
                 <div className={showVid ? 'overlay-show' : 'overlay-hide'}>
