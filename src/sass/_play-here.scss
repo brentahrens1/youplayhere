@@ -16,20 +16,6 @@
         grid-template-columns: repeat(9, 1fr);
         grid-template-rows: repeat(8, 100px);
 
-        .intro-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: $primary-color;
-            font-size: 80px;
-            text-transform: uppercase;
-            opacity: 0;
-            white-space: nowrap;
-            z-index: 1;
-            animation: title 2s ease-out;
-        }
-
         .play__grid-piece {
             width: 100%;
 
@@ -94,6 +80,10 @@
             grid-row: 2 / span 1; 
             justify-self: end;
             animation: slideRight 2s ease-in;
+
+            &.active-7 {
+                @include bounce;
+            }
         }
 
         .symbol-two {
@@ -101,6 +91,10 @@
             grid-row: 1 / span 1; 
             justify-self: end;
             animation: slideRight 2s ease-in;
+
+            &.active-6 {
+                @include bounce;
+            }
         }
 
         .symbol-three {
@@ -108,6 +102,10 @@
             grid-row: 6 / span 1;
             align-self: end;
             animation: slideLeft 2s ease-in;
+
+            &.active-12 {
+                @include bounce;
+            }
         }
 
         .symbol-four {
@@ -116,6 +114,10 @@
             align-self: center;
             width: 30%;
             animation: slideLeft 2s ease-in;
+
+            &.active-8 {
+                @include bounce;
+            }
         }
 
         .symbol-five {
@@ -124,6 +126,10 @@
             justify-self: end;
             align-self: center;
             animation: slideLeft 2s ease-in;
+
+            &.active-11 {
+                @include bounce;
+            }
         }
 
         .symbol-six {
@@ -131,6 +137,10 @@
             grid-row: 7 / span 1;
             align-self: center;
             animation: slideLeft 2s ease-in;
+
+            &.active-10 {
+                @include bounce;
+            }
         }
 
         .symbol-seven {
@@ -138,6 +148,10 @@
             grid-row: 4 / span 1;
             align-self: center;
             animation: slideLeft 2s ease-in;
+
+            &.active-9 {
+                @include bounce;
+            }
         }
 
         .symbol-eight {
@@ -149,6 +163,10 @@
             align-self: center;
             justify-self: center;
             animation: slideMiddle 2s ease-in;
+
+            &.active-13 {
+                @include bounce;
+            }
         }
 
         .symbol-nine {
@@ -158,6 +176,10 @@
             justify-self: center;
             width: 70%;
             animation: slideRight 2s ease-in;
+
+            &.active-14 {
+                @include bounce;
+            }
         }
 
         .symbol-ten {
@@ -167,6 +189,10 @@
             justify-self: end;
             width: 30%;
             animation: slideRight 2s ease-in;
+
+            &.active-4 {
+                @include bounce;
+            }
         }
 
         .symbol-eleven {
@@ -176,6 +202,10 @@
             align-self: center;
             width: 30%;
             animation: slideRight 2s ease-in;
+
+            &.active-5 {
+                @include bounce;
+            }
         }
 
         .symbol-twelve {
@@ -194,6 +224,10 @@
             justify-self: end;
             width: 70%;
             animation: slideRight 2s ease-in;
+
+            &.active-2 {
+                @include bounce;
+            }
         }
 
         .symbol-fourteen {
@@ -204,16 +238,10 @@
             width: 50%;
             z-index: 2;
             animation: slideRight 2s ease-in;
-        }
 
-        .symbol-fifthteen {
-            grid-column: 7 / span 1;
-            grid-row: 5 / span 1;
-            align-self: start;
-            justify-self: center;
-            width: 100%;
-            z-index: 1;
-            animation: slideRight 2s ease-in;
+            &.active-3 {
+                @include bounce;
+            }
         }
 
         .overlay-hide {
@@ -280,10 +308,6 @@
         padding-top: 6rem;
         &__grid {
 
-            .intro-text {
-                font-size: 50px;
-            }
-
             grid-template-rows: repeat(8, 100px);
     
             .symbol {
@@ -294,24 +318,40 @@
                 grid-column: 6 / span 1;
                 grid-row: 2 / span 1; 
                 justify-self: end;
+
+                &.active-1 {
+                    @include bounce;
+                }
             }
     
             .symbol-two {
                 grid-column: 7 / span 1;
                 grid-row: 1 / span 1; 
                 justify-self: end;
+
+                &.active-2 {
+                    @include bounce;
+                }
             }
     
             .symbol-three {
                 grid-column: 4 / span 1;
                 grid-row: 6 / span 1;
                 align-self: end;
+
+                &.active-3 {
+                    @include bounce;
+                }
             }
     
             .symbol-four {
                 grid-row: 2 / span 1;
                 align-self: end;
                 width: 30%;
+
+                &.active-4 {
+                    @include bounce;
+                }
             }
     
             .symbol-five {
@@ -319,18 +359,30 @@
                 grid-row: 4 / span 1;
                 justify-self: end;
                 align-self: center;
+
+                &.active-5 {
+                    @include bounce;
+                }
             }
     
             .symbol-six {
                 grid-column: 1 / span 1;
                 grid-row: 7 / span 1;
                 align-self: start;
+
+                &.active-6 {
+                    @include bounce;
+                }
             }
     
             .symbol-seven {
                 grid-column: 1 / span 1;
                 grid-row: 4 / span 1;
                 align-self: center;
+
+                &.active-7 {
+                    @include bounce;
+                }
             }
     
             .symbol-eight {
@@ -341,6 +393,10 @@
                 width: 100%;
                 align-self: end;
                 justify-self: center;
+
+                &.active-8 {
+                    @include bounce;
+                }
             }
     
             .symbol-nine {
@@ -351,12 +407,23 @@
                 width: 80%;
             }
     
+            .active-9 {
+                animation: bounce 0.5s; 
+                animation-direction: alternate; 
+                animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
+                animation-iteration-count: infinite;
+            }
+
             .symbol-ten {
                 grid-column: 8 / span 1;
                 grid-row: 3 / span 1;
                 align-self: start;
                 justify-self: end;
                 width: 30%;
+
+                &.active-10 {
+                    @include bounce;
+                }
             }
     
             .symbol-eleven {
@@ -365,6 +432,10 @@
                 justify-self: end;
                 align-self: center;
                 width: 30%;
+
+                &.active-11 {
+                    @include bounce;
+                }
             }
     
             .symbol-twelve {
@@ -373,6 +444,10 @@
                 align-self: center;
                 justify-self: end;
                 transform: rotate(15deg);
+
+                &.active-12 {
+                    @include bounce;
+                }
             }
     
             .symbol-thirteen {
@@ -381,6 +456,10 @@
                 align-self: end;
                 justify-self: end;
                 width: 80%;
+
+                &.active-13 {
+                    @include bounce;
+                }
             }
     
             .symbol-fourteen {
@@ -389,6 +468,10 @@
                 align-self: center;
                 justify-self: center;
                 width: 50%;
+
+                &.active-14 {
+                    @include bounce;
+                }
             }
 
             .symbol-fifthteen {
@@ -406,10 +489,6 @@
     .play {
         padding-top: 5rem;
         &__grid {
-
-            .intro-text {
-                font-size: 30px;
-            }
 
             grid-template-rows: repeat(8, 100px);
 
@@ -549,10 +628,6 @@
                 img {
                    margin-bottom: 3.5rem;
                 }
-            }
-    
-            .intro-text {
-                display: none;
             }
 
             .six {
@@ -761,11 +836,11 @@
     }
 }
 
-@keyframes title {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+@keyframes bounce { 
+    from { 
+        transform: translate3d(0, 0, 0); 
+    } 
+    to { 
+        transform: translate3d(0, 10px, 0); 
+    } 
+} 

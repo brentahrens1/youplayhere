@@ -42,6 +42,7 @@ const PlayHere = () => {
     const [ showVid, setShowVid ] = useState(false)
     const [currentVid, setCurrentVid] = useState("")
     const [ audio, setAudio ] = useState(null)
+    const [ isActive, setIsActive ] = useState(14)
 
     const handleClick = (e) => {
         setShowVid(true)
@@ -52,14 +53,16 @@ const PlayHere = () => {
         />)
     }
 
-    const handleClear = () => {
+    const handleClear = (e) => {
         setShowVid(!showVid)
         setCurrentVid('')
         setAudio( <ReactAudioPlayer
             src={landingAudio}
             autoPlay
             loop
+            muted
         />)
+        setIsActive(isActive - 1)
     }
 
     useEffect(() => {
@@ -67,6 +70,7 @@ const PlayHere = () => {
             src={landingAudio}
             autoPlay
             loop
+            muted
         />)
     }, [])
 
@@ -92,50 +96,47 @@ const PlayHere = () => {
                 <div className="play__grid-piece six">
                     <img src={extraBushes} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-one">
-                    <img id="1" onClick={handleClick} src={cricketBug} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-one ${isActive ==  7 ? "active-7" : ''}`}>
+                    <img id="7" onClick={handleClick} src={cricketBug} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-two">
-                    <img id="2" onClick={handleClick} src={cricketWhite} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-two ${isActive == 6 ? "active-6" : ''}`}>
+                    <img id="6" onClick={handleClick} src={cricketWhite} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-three">
-                    <img id="3" onClick={handleClick} src={squirrel} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-three ${isActive == 12 ? "active-12" : ''}`}>
+                    <img id="12" onClick={handleClick} src={squirrel} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-four">
-                    <img id="4" onClick={handleClick} src={apple} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-four ${isActive == 8 ? "active-8" : ''}`}>
+                    <img id="8" onClick={handleClick} src={apple} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-five">
-                    <img id="5" onClick={handleClick} src={rat} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-five ${isActive == 11 ? "active-11" : ''}`}>
+                    <img id="11" onClick={handleClick} src={rat} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-six">
-                    <img id="6" onClick={handleClick} src={music} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-six ${isActive == 10 ? "active-10" : ''}`}>
+                    <img id="10" onClick={handleClick} src={music} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-seven">
-                    <img id="7" onClick={handleClick} src={pigeon} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-seven ${isActive == 9 ? "active-9" : ''}`}>
+                    <img id="9" onClick={handleClick} src={pigeon} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-eight">
-                    <img id="8" onClick={handleClick} src={bridge} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-eight ${isActive == 13 ? "active-13" : ''}`}>
+                    <img id="13" onClick={handleClick} src={bridge} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-nine">
-                    <img id="9" onClick={handleClick} src={startHere} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-nine ${isActive == 14 ? "active-14" : ''}`}>
+                    <img id="14" onClick={handleClick} src={startHere} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-ten">
-                    <img id="10" onClick={handleClick} src={cup} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-ten ${isActive == 4 ? "active-4" : ''}`}>
+                    <img id="4" onClick={handleClick} src={cup} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-eleven">
-                    <img id="11" onClick={handleClick} src={globe} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-eleven ${isActive == 5 ? "active-5" : ''}`}>
+                    <img id="5" onClick={handleClick} src={globe} alt="Uptown" />
                 </div>
                 <div className="play__grid-piece symbol symbol-twelve">
-                    <img id="12" onClick={handleClick} src={bench} alt="Uptown" />
+                    <img id="6" onClick={handleClick} src={bench} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-thirteen">
-                    <img id="13" onClick={handleClick} src={projectCredits} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-thirteen ${isActive == 2 ? "active-2" : ''}`}>
+                    <img id="2" onClick={handleClick} src={projectCredits} alt="Uptown" />
                 </div>
-                <div className="play__grid-piece symbol symbol-fourteen">
-                    <img id="14" onClick={handleClick} src={sunset} alt="Uptown" />
-                </div>
-                <div className="play__grid-piece symbol symbol-fifthteen">
-                    <img id="14" onClick={handleClick} src={sunsetBack} alt="Uptown" />
+                <div className={`play__grid-piece symbol symbol-fourteen ${isActive == 3 ? "active-3" : ''}`}>
+                    <img id="3" onClick={handleClick} src={sunsetBack} alt="Uptown" />
                 </div>
                 <div className="intro-text">
                     <h1>You Play Here</h1>
