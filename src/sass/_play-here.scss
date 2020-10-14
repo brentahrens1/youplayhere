@@ -77,22 +77,28 @@
 
         .symbol-one {
             grid-column: 6 / span 1;
-            grid-row: 2 / span 1; 
-            justify-self: end;
+            grid-row: 5 / span 1;
+            align-self: start;
+            justify-self: center;
+            width: 70%;
             animation: slideRight 2s ease-in;
 
-            &.active-7 {
+            &.active-14 {
                 @include bounce;
             }
         }
 
         .symbol-two {
-            grid-column: 7 / span 1;
-            grid-row: 1 / span 1; 
-            justify-self: end;
-            animation: slideRight 2s ease-in;
+            grid-column: 5 / span 1;
+            grid-row: 6 / span 1;
+            align-self: center;
+            z-index: 999;
+            width: 100%;
+            align-self: center;
+            justify-self: center;
+            animation: slideMiddle 2s ease-in;
 
-            &.active-6 {
+            &.active-13 {
                 @include bounce;
             }
         }
@@ -108,19 +114,8 @@
             }
         }
 
+
         .symbol-four {
-            grid-column: 3 / span 1;
-            grid-row: 3 / span 1;
-            align-self: center;
-            width: 30%;
-            animation: slideLeft 2s ease-in;
-
-            &.active-8 {
-                @include bounce;
-            }
-        }
-
-        .symbol-five {
             grid-column: 3 / span 1;
             grid-row: 4 / span 1;
             justify-self: end;
@@ -132,7 +127,7 @@
             }
         }
 
-        .symbol-six {
+        .symbol-five {
             grid-column: 1 / span 1;
             grid-row: 7 / span 1;
             align-self: center;
@@ -143,10 +138,12 @@
             }
         }
 
-        .symbol-seven {
+        .symbol-six {
             grid-column: 1 / span 1;
-            grid-row: 4 / span 1;
+            grid-row: 5 / span 1;
             align-self: center;
+            justify-self: end;
+            transform: rotate(15deg);
             animation: slideLeft 2s ease-in;
 
             &.active-9 {
@@ -154,43 +151,47 @@
             }
         }
 
-        .symbol-eight {
-            grid-column: 5 / span 1;
-            grid-row: 6 / span 1;
+        .symbol-seven {
+            grid-column: 1 / span 1;
+            grid-row: 4 / span 1;
             align-self: center;
-            z-index: 999;
-            width: 100%;
-            align-self: center;
-            justify-self: center;
-            animation: slideMiddle 2s ease-in;
+            animation: slideLeft 2s ease-in;
 
-            &.active-13 {
+            &.active-8 {
+                @include bounce;
+            }
+        }
+
+        .symbol-eight {
+            grid-column: 3 / span 1;
+            grid-row: 3 / span 1;
+            align-self: center;
+            width: 30%;
+            animation: slideLeft 2s ease-in;
+
+            &.active-7 {
                 @include bounce;
             }
         }
 
         .symbol-nine {
             grid-column: 6 / span 1;
-            grid-row: 5 / span 1;
-            align-self: start;
-            justify-self: center;
-            width: 70%;
+            grid-row: 2 / span 1; 
+            justify-self: end;
             animation: slideRight 2s ease-in;
 
-            &.active-14 {
+            &.active-6 {
                 @include bounce;
             }
         }
-
+        
         .symbol-ten {
-            grid-column: 8 / span 1;
-            grid-row: 3 / span 1;
-            align-self: end;
+            grid-column: 7 / span 1;
+            grid-row: 1 / span 1; 
             justify-self: end;
-            width: 30%;
             animation: slideRight 2s ease-in;
 
-            &.active-4 {
+            &.active-5 {
                 @include bounce;
             }
         }
@@ -203,21 +204,39 @@
             width: 30%;
             animation: slideRight 2s ease-in;
 
-            &.active-5 {
+            &.active-4 {
                 @include bounce;
             }
         }
 
         .symbol-twelve {
-            grid-column: 1 / span 1;
-            grid-row: 5 / span 1;
-            align-self: center;
+            grid-column: 8 / span 1;
+            grid-row: 3 / span 1;
+            align-self: flex-end;
             justify-self: end;
-            transform: rotate(15deg);
+            width: 35%;
             animation: slideLeft 2s ease-in;
+
+            &.active-3 {
+                @include bounce;
+            }
         }
 
         .symbol-thirteen {
+            grid-column: 7 / span 1;
+            grid-row: 5 / span 1;
+            align-self: end;
+            justify-self: center;
+            width: 70%;
+            z-index: 2;
+            animation: slideRight 2s ease-in;
+
+            &.active-1 {
+                @include bounce;
+            }
+        }
+
+        .symbol-fourteen {
             grid-column: 8 / span 1;
             grid-row: 7 / span 1;
             align-self: start;
@@ -226,20 +245,6 @@
             animation: slideRight 2s ease-in;
 
             &.active-2 {
-                @include bounce;
-            }
-        }
-
-        .symbol-fourteen {
-            grid-column: 7 / span 1;
-            grid-row: 5 / span 1;
-            align-self: end;
-            justify-self: center;
-            width: 50%;
-            z-index: 2;
-            animation: slideRight 2s ease-in;
-
-            &.active-3 {
                 @include bounce;
             }
         }
@@ -305,453 +310,12 @@
 
 @media (max-width: 1200px) {
     .play {
-        padding-top: 6rem;
-        &__grid {
-
-            grid-template-rows: repeat(8, 100px);
-    
-            .symbol {
-                width: 40%;
-            }
-    
-            .symbol-one {
-                grid-column: 6 / span 1;
-                grid-row: 2 / span 1; 
-                justify-self: end;
-
-                &.active-1 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-two {
-                grid-column: 7 / span 1;
-                grid-row: 1 / span 1; 
-                justify-self: end;
-
-                &.active-2 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-three {
-                grid-column: 4 / span 1;
-                grid-row: 6 / span 1;
-                align-self: end;
-
-                &.active-3 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-four {
-                grid-row: 2 / span 1;
-                align-self: end;
-                width: 30%;
-
-                &.active-4 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-five {
-                grid-column: 3 / span 1;
-                grid-row: 4 / span 1;
-                justify-self: end;
-                align-self: center;
-
-                &.active-5 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-six {
-                grid-column: 1 / span 1;
-                grid-row: 7 / span 1;
-                align-self: start;
-
-                &.active-6 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-seven {
-                grid-column: 1 / span 1;
-                grid-row: 4 / span 1;
-                align-self: center;
-
-                &.active-7 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-eight {
-                grid-column: 5 / span 1;
-                grid-row: 4 / span 1;
-                align-self: center;
-                z-index: 999;
-                width: 100%;
-                align-self: end;
-                justify-self: center;
-
-                &.active-8 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-nine {
-                grid-column: 6 / span 1;
-                grid-row: 5 / span 1;
-                align-self: start;
-                justify-self: center;
-                width: 80%;
-            }
-    
-            .active-9 {
-                animation: bounce 0.5s; 
-                animation-direction: alternate; 
-                animation-timing-function: cubic-bezier(.5, 0.05, 1, .5); 
-                animation-iteration-count: infinite;
-            }
-
-            .symbol-ten {
-                grid-column: 8 / span 1;
-                grid-row: 3 / span 1;
-                align-self: start;
-                justify-self: end;
-                width: 30%;
-
-                &.active-10 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-eleven {
-                grid-column: 9 / span 1;
-                grid-row: 1 / span 1;
-                justify-self: end;
-                align-self: center;
-                width: 30%;
-
-                &.active-11 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-twelve {
-                grid-column: 1 / span 1;
-                grid-row: 5 / span 1;
-                align-self: center;
-                justify-self: end;
-                transform: rotate(15deg);
-
-                &.active-12 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-thirteen {
-                grid-column: 8 / span 1;
-                grid-row: 6 / span 1;
-                align-self: end;
-                justify-self: end;
-                width: 80%;
-
-                &.active-13 {
-                    @include bounce;
-                }
-            }
-    
-            .symbol-fourteen {
-                grid-column: 7 / span 1;
-                grid-row: 5 / span 1;
-                align-self: center;
-                justify-self: center;
-                width: 50%;
-
-                &.active-14 {
-                    @include bounce;
-                }
-            }
-
-            .symbol-fifthteen {
-                grid-column: 7 / span 1;
-                grid-row: 5 / span 1;
-                align-self: start;
-                justify-self: center;
-                width: 100%;
-            }
-        }
-    }
-}
-
-@media (max-width: 900px) {
-    .play {
-        padding-top: 5rem;
-        &__grid {
-
-            grid-template-rows: repeat(8, 100px);
-
-            .three {
-                grid-column: 5 / span 1;
-                grid-row: 2 / 3;
-            }
-    
-            .symbol {
-                width: 40%;
-            }
-    
-            .symbol-one {
-                grid-column: 6 / span 1;
-                grid-row: 2 / span 1; 
-                justify-self: end;
-            }
-    
-            .symbol-two {
-                grid-column: 7 / span 1;
-                grid-row: 1 / span 1; 
-                justify-self: end;
-            }
-    
-            .symbol-three {
-                grid-column: 4 / span 1;
-                grid-row: 6 / span 1;
-                align-self: flex-start;
-            }
-    
-            .symbol-four {
-                grid-row: 2 / span 1;
-                align-self: start;
-                transform: translateY(20px);
-                width: 30%;
-            }
-    
-            .symbol-five {
-                grid-column: 3 / span 1;
-                grid-row: 4 / span 1;
-                justify-self: end;
-                align-self: end;
-            }
-    
-            .symbol-six {
-                grid-column: 1 / span 1;
-                grid-row: 6 / span 1;
-                align-self: center;
-            }
-    
-            .symbol-seven {
-                grid-column: 1 / span 1;
-                grid-row: 4 / span 1;
-                align-self: center;
-            }
-    
-            .symbol-eight {
-                grid-column: 5 / span 1;
-                grid-row: 4 / span 1;
-                align-self: center;
-                z-index: 999;
-                width: 100%;
-                align-self: end;
-                justify-self: center;
-            }
-    
-            .symbol-nine {
-                grid-column: 6 / span 1;
-                grid-row: 5 / span 1;
-                align-self: start;
-                justify-self: center;
-                width: 80%;
-            }
-    
-            .symbol-ten {
-                grid-column: 8 / span 1;
-                grid-row: 2 / span 1;
-                align-self: center;
-                justify-self: end;
-                width: 30%;
-            }
-    
-            .symbol-eleven {
-                grid-column: 9 / span 1;
-                grid-row: 1 / span 1;
-                justify-self: end;
-                align-self: center;
-                width: 30%;
-            }
-    
-            .symbol-twelve {
-                grid-column: 1 / span 1;
-                grid-row: 5 / span 1;
-                align-self: start;
-                justify-self: end;
-                transform: rotate(15deg);
-                transform: translateY(10px);
-            }
-    
-            .symbol-thirteen {
-                grid-column: 8 / span 1;
-                grid-row: 6 / span 1;
-                align-self: center;
-                justify-self: end;
-                width: 80%;
-            }
-    
-            .symbol-fourteen {
-                grid-column: 7 / span 1;
-                grid-row: 5 / span 1;
-                align-self: center;
-                justify-self: center;
-                width: 50%;
-            }
-
-            .symbol-fifthteen {
-                grid-column: 7 / span 1;
-                grid-row: 5 / span 1;
-                align-self: start;
-                justify-self: center;
-                width: 100%;
-            }
-        }
     }
 }
 
 @media (max-width: 700px) {
     .play {
     
-        &__grid {
-            display: flex;
-            flex-direction: column;
-            padding: 0;
-
-            .play__grid-piece {
-    
-                img {
-                   margin-bottom: 3.5rem;
-                }
-            }
-
-            .six {
-                display: none;
-            }
-    
-            .five {
-                display: none;
-            }
-    
-            .four {
-                display: none;
-            }
-    
-            .three {
-                display: none;
-            }
-    
-            .two {
-                display: none;
-            }
-    
-            .one {
-                display: none;
-            }
-    
-            .symbol {
-                width: 50%;
-                margin: 0 auto;
-            }
-    
-            .symbol-one {
-                order: 9;
-                animation: none;
-                width: 40%;
-            }
-    
-            .symbol-two {
-                order: 11;
-                width: 35%;
-                animation: none;
-            }
-    
-            .symbol-three {
-                order: 4;
-                width: 35%;
-                animation: none;
-            }
-    
-            .symbol-four {
-                order: 8;
-                width: 30%;
-                animation: none;
-            }
-    
-            .symbol-five {
-                order: 3;
-                width: 40%;
-                animation: none;
-            }
-    
-            .symbol-six {
-                order: 5;
-                width: 35%;
-                animation: none;
-            }
-    
-            .symbol-seven {
-                order: 7;
-                animation: none;
-                width: 40%;
-            }
-    
-            .symbol-eight {
-                order: 2;
-                animation: none;
-            }
-    
-            .symbol-nine {
-                margin-top: 3.5rem;
-                order: 1;
-                animation: none;
-            }
-    
-            .symbol-ten {
-                order: 12;
-                width: 35%;
-                animation: none;
-            }
-    
-            .symbol-eleven {
-                order: 10;
-                width: 35%;
-                animation: none;
-            }
-    
-            .symbol-twelve {
-                order: 6;
-                animation: none;
-                width: 40%;
-            }
-    
-            .symbol-thirteen {
-                order: 14;
-                animation: none;
-            }
-    
-            .symbol-fourteen {
-                order: 13;
-                animation: none;
-            }
-    
-            .symbol-fifthteen {
-                display: none;
-            }
-
-            .overlay-show {
-    
-                .video-one {
-                    width: 100%;
-                }   
-            
-            }
-        }
     }
 }
 
@@ -775,6 +339,8 @@
     } 
 }
 
+
+//animations
 
 @keyframes rotate1 {
     from  {
