@@ -46,8 +46,6 @@ const PlayHere = () => {
     const handleClick = (e) => {
         setShowVid(true)
         setCurrentVid(e.target.id)
-        console.log(e.target.id)
-        console.log(showVid)
         setAudio(<ReactAudioPlayer
             src={landingAudio}
             muted
