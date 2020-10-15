@@ -64,7 +64,8 @@ const PlayHere = () => {
             loop
         />)
         setStopBounce(!stopBounce)
-        setIsActive(isActive - 1)
+
+        isActive > 1 ? setIsActive(isActive - 1) : setIsActive(14)
     }
 
     useEffect(() => {

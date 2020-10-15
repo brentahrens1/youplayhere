@@ -248,7 +248,7 @@
             z-index: 2;
             animation: slideRight 2s ease-in;
 
-            &.active-1 {
+            &.active-2 {
                 @include bounce;
             }
         }
@@ -261,7 +261,7 @@
             width: 70%;
             animation: slideRight 2s ease-in;
 
-            &.active-2 {
+            &.active-1 {
                 @include bounce;
             }
         }
