@@ -1,6 +1,18 @@
 @import './mixins';
 @import './variables';
 
+.container {
+    .landing-video {
+        position: fixed;
+        object-fit: cover;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        min-width: 100%;
+        min-height: 100%;
+    }
+}
+
 .play {
     width: calc(100% - 3rem);
     height: 100vh;
@@ -101,6 +113,7 @@
             width: 100%;
             align-self: center;
             justify-self: center;
+            animation: slideMiddle 2s ease-in;
 
             &.active-13 {
                 @include bounce;
@@ -111,6 +124,7 @@
             grid-column: 4 / span 1;
             grid-row: 6 / span 1;
             align-self: end;
+            animation: slideLeft 2s ease-in;
 
             &.active-12 {
                 @include bounce;
@@ -123,6 +137,7 @@
             grid-row: 4 / span 1;
             justify-self: end;
             align-self: center;
+            animation: slideLeft 2s ease-in;
 
             &.active-11 {
                 @include bounce;
@@ -133,6 +148,7 @@
             grid-column: 1 / span 1;
             grid-row: 7 / span 1;
             align-self: center;
+            animation: slideLeft 2s ease-in;
 
             &.active-10 {
                 @include bounce;
@@ -145,6 +161,7 @@
             align-self: center;
             justify-self: end;
             transform: rotate(15deg);
+            animation: slideLeft 2s ease-in;
 
             &.active-9 {
                 @include bounce;
@@ -155,6 +172,7 @@
             grid-column: 1 / span 1;
             grid-row: 4 / span 1;
             align-self: center;
+            animation: slideLeft 2s ease-in;
 
             &.active-8 {
                 @include bounce;
@@ -166,6 +184,7 @@
             grid-row: 3 / span 1;
             align-self: center;
             width: 30%;
+            animation: slideLeft 2s ease-in;
 
             &.active-7 {
                 @include bounce;
@@ -176,6 +195,7 @@
             grid-column: 6 / span 1;
             grid-row: 2 / span 1; 
             justify-self: end;
+            animation: slideRight 2s ease-in;
 
             &.active-6 {
                 @include bounce;
@@ -186,6 +206,7 @@
             grid-column: 7 / span 1;
             grid-row: 1 / span 1; 
             justify-self: end;
+            animation: slideRight 2s ease-in;
 
             &.active-5 {
                 @include bounce;
@@ -198,6 +219,7 @@
             justify-self: end;
             align-self: center;
             width: 30%;
+            animation: slideRight 2s ease-in;
 
             &.active-4 {
                 @include bounce;
@@ -210,6 +232,7 @@
             align-self: flex-end;
             justify-self: end;
             width: 35%;
+            animation: slideRight 2s ease-in;
 
             &.active-3 {
                 @include bounce;
@@ -223,6 +246,7 @@
             justify-self: center;
             width: 70%;
             z-index: 2;
+            animation: slideRight 2s ease-in;
 
             &.active-1 {
                 @include bounce;
@@ -235,6 +259,7 @@
             align-self: start;
             justify-self: end;
             width: 70%;
+            animation: slideRight 2s ease-in;
 
             &.active-2 {
                 @include bounce;
