@@ -54,6 +54,28 @@
     display: block;
 }
 
+// nav 
+
+@mixin nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 100vw;
+    height: 5rem;
+    background: transparent;
+    text-transform: uppercase;
+    z-index: 999;
+    @include flex-row;
+    justify-content: space-between;
+
+    &__logo, &__list {
+        margin: 0 1.5rem;
+        padding: 0;
+        cursor: pointer;
+    }
+}
+
 // page nav background
 
 @mixin page-nav-background {

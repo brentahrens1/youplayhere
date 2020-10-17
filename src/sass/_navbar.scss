@@ -2,26 +2,19 @@
 @import './mixins';
 
 .nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-width: 100vw;
-    height: 5rem;
-    background: transparent;
+    @include nav;
     color: $secondary-color;
-    text-transform: uppercase;
-    z-index: 999;
-    @include flex-row;
-    justify-content: space-between;
 
     a:link, a:visited {
         color: $secondary-color;
     }
+}
 
-    &__logo, &__list {
-        margin: 0 1.5rem;
-        padding: 0;
-        cursor: pointer;
+.secondary-nav {
+    @include nav;
+    color: $primary-color;
+
+    a:link, a:visited {
+        color: $primary-color;
     }
 }

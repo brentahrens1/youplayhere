@@ -1,6 +1,8 @@
 import React from 'react'
 import '../../sass/_home.scss'
 
+import Nav from '../NavBar/NavBar'
+
 import { Link } from 'react-router-dom'
 
 import landingVideo from '../../assets/LandingVideo/background.mp4'
@@ -9,6 +11,7 @@ const Home = () => {
 
     return (
         <div className="home">
+            <Nav />
             <div className="home__inner">
                 <div className="home__content">
                     <h1>You Play Here</h1>

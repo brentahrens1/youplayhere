@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import '../../sass/_play-here.scss'
 
+import SecondaryNav from '../SecondaryNav/SecondaryNav'
+
 // symbols
 
 import cricketBug from '../../assets/images/symbols/Cricketbugwhite.png'
@@ -91,6 +93,7 @@ const PlayHere = () => {
 
     return (
         <div className="container">
+            <SecondaryNav />
         {
             endClip ? 
             <div className="play">
