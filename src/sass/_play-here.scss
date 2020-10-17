@@ -375,7 +375,6 @@
 @media (max-height: 900px) {
     .play {
         &__grid {
-            grid-template-rows: repeat(8, 100px);
         }
     }
 }
@@ -396,7 +395,6 @@
     .play {
     
         &__grid {
-            grid-template-rows: repeat(8, 120px);
         }
     } 
 }
@@ -405,7 +403,6 @@
     .play {
     
         &__grid {
-            grid-template-rows: repeat(8, 140px);
         }
     } 
 }
