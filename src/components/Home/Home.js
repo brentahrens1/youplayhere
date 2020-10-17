@@ -3,7 +3,7 @@ import '../../sass/_home.scss'
 
 import { Link } from 'react-router-dom'
 
-import landingVideo from '../../assets/LandingVideo/landing.mp4'
+import landingVideo from '../../assets/LandingVideo/background.mp4'
 
 const Home = () => {
 

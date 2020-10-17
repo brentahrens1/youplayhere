@@ -45,6 +45,7 @@ const PlayHere = () => {
     const [ stopBounce, setStopBounce ] = useState(true)
     const [ endClip, setEndClip ] = useState(false)
     const [ isVideo, setIsVideo ] = useState(false)
+    const [ introAnimation, setIntroAnimation ] = useState(false)
 
     const handleClick = (e) => {
         setShowVid(true)
@@ -107,7 +108,7 @@ const PlayHere = () => {
                     <div className="play__grid-piece six">
                         <img src={extraBushes} alt="Uptown" />
                     </div>
-                    <div className={`play__grid-piece symbol symbol-one ${stopBounce && isActive == 14 ? "active-14" : ''}`}>
+                    <div className={`play__grid-piece symbol symbol-one  ${stopBounce && isActive == 14 ? "active-14" : ''}`}>
                         <img id="14" onClick={handleClick} src={startHere} alt="Uptown" />
                     </div>
                     <div className={`play__grid-piece symbol symbol-two ${stopBounce && isActive == 13 ? "active-13" : ''}`}>

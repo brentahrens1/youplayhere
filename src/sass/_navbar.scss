@@ -9,14 +9,14 @@
     min-width: 100vw;
     height: 5rem;
     background: transparent;
-    color: $primary-color;
+    color: $secondary-color;
     text-transform: uppercase;
     z-index: 999;
     @include flex-row;
     justify-content: space-between;
 
     a:link, a:visited {
-        color: $primary-color;
+        color: $secondary-color;
     }
 
     &__logo, &__list {
