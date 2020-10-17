@@ -51,6 +51,7 @@ const PlayHere = () => {
         setCurrentVid(e.target.id)
         setAudio(<ReactAudioPlayer
             src={landingAudio}
+            muted
         />)
         setStopBounce(!stopBounce)
     }
@@ -71,7 +72,7 @@ const PlayHere = () => {
     useEffect(() => {
         setTimeout(function() {
             setIntroAnimation(!introAnimation)
-        }, 5000)
+        }, 4500)
     }, [])
 
     useEffect(() => {
