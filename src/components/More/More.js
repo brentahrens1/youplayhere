@@ -1,9 +1,12 @@
 import React from 'react'
 import '../../sass/_more.scss'
 
+import SecondaryNav from '../SecondaryNav/SecondaryNav'
+
 const More = () => {
     return (
         <div className="more">
+            <SecondaryNav />
             <form className="contact-form">
                 <h1>Feel free to reach out if you would like to contribute!</h1>
                 <input type="hidden" name="contact_number" />
