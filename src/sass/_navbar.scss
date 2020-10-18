@@ -3,10 +3,10 @@
 
 .nav {
     @include nav;
-    color: $secondary-color;
+    color: $primary-color;
 
     a:link, a:visited {
-        color: $secondary-color;
+        color: $primary-color;
     }
 }
 

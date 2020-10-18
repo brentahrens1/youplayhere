@@ -5,7 +5,7 @@ import Nav from '../NavBar/NavBar'
 
 import { Link } from 'react-router-dom'
 
-import landingVideo from '../../assets/LandingVideo/background.mp4'
+import landingVideo from '../../assets/LandingVideo/landing2.mp4'
 
 const Home = () => {
 
