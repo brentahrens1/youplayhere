@@ -5,13 +5,13 @@ import Nav from '../NavBar/NavBar'
 
 import { Link } from 'react-router-dom'
 
-import landingVideo from '../../assets/LandingVideo/landing3.mp4'
+import landingVideo from '../../assets/LandingVideo/landing4.mp4'
 
 const Home = () => {
 
     return (
         <div className="home">
-            <Nav />
+            {/* <Nav /> */}
             <div className="home__inner">
                 <div className="home__content">
                     <h1>You Play Here</h1>
