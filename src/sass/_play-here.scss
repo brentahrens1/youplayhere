@@ -160,7 +160,7 @@
         .symbol-five {
             grid-column: 1 / span 1;
             grid-row: 7 / span 1;
-            align-self: center;
+            align-self: end;
 
             &.intro-animation {
                 animation: slideLeft 2s ease-in;
@@ -408,7 +408,7 @@
 }
 
 
-// keyframe animations
+// keyframes animations
 
 @keyframes rotate1 {
     from  {
