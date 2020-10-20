@@ -20,7 +20,7 @@ export const videos = [
         id: "1",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video14} type="video/mp4" />
+                        <source src={video1} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -28,7 +28,7 @@ export const videos = [
         id: "2",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video13} type="video/mp4" />
+                        <source src={video2} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -36,7 +36,7 @@ export const videos = [
         id: "3",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video12} type="video/mp4" />
+                        <source src={video3} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -44,7 +44,7 @@ export const videos = [
         id: "4",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video11} type="video/mp4" />
+                        <source src={video4} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -52,7 +52,7 @@ export const videos = [
         id: "5",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video10} type="video/mp4" />
+                        <source src={video5} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -60,7 +60,7 @@ export const videos = [
         id: "6",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video9} type="video/mp4" />
+                        <source src={video6} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -68,7 +68,7 @@ export const videos = [
         id: "7",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video8} type="video/mp4" />
+                        <source src={video7} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -76,7 +76,7 @@ export const videos = [
         id: "8",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video7} type="video/mp4" />
+                        <source src={video8} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -84,7 +84,7 @@ export const videos = [
         id: "9",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video6} type="video/mp4" />
+                        <source src={video9} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -92,7 +92,7 @@ export const videos = [
         id: "10",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video5} type="video/mp4" />
+                        <source src={video10} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -100,7 +100,7 @@ export const videos = [
         id: "11",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video4} type="video/mp4" />
+                        <source src={video11} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -108,7 +108,7 @@ export const videos = [
         id: "12",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video3} type="video/mp4" />
+                        <source src={video12} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -116,7 +116,7 @@ export const videos = [
         id: "13",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video2} type="video/mp4" />
+                        <source src={video13} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -124,7 +124,7 @@ export const videos = [
         id: "14",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video1} type="video/mp4" />
+                        <source src={video14} type="video/mp4" />
                     </video>
                 </div>
     },
