@@ -69,7 +69,7 @@
     @include flex-row;
     justify-content: space-between;
 
-    &__logo, &__list {
+    &__logo {
         margin: 0 1.5rem;
         padding: 0;
         cursor: pointer;

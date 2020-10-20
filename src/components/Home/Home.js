@@ -11,7 +11,6 @@ const Home = () => {
 
     return (
         <div className="home">
-            {/* <Nav /> */}
             <div className="home__inner">
                 <div className="home__content">
                     <h1>You Play Here</h1>

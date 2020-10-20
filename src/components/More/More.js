@@ -8,7 +8,7 @@ const More = () => {
         <div className="more">
             <SecondaryNav />
             <form className="contact-form">
-                <h1>Feel free to reach out if you would like to contribute!</h1>
+                <h1>This project is meant to keep growing so if you have any questions or if you'd like to participate with your community connect here</h1>
                 <input type="hidden" name="contact_number" />
                 <label>Name</label>
                 <input type="text" name="user_name" />
