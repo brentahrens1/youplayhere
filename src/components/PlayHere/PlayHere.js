@@ -89,6 +89,7 @@ const PlayHere = () => {
             src={landingAudio}
             autoPlay
             loop
+            muted
         />)
     }, [])
 
