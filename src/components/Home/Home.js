@@ -1,8 +1,6 @@
 import React from 'react'
 import '../../sass/_home.scss'
 
-import Nav from '../NavBar/NavBar'
-
 import { Link } from 'react-router-dom'
 
 import landingVideo from '../../assets/LandingVideo/landing4.mp4'
