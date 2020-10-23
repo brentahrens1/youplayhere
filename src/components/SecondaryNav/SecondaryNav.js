@@ -18,7 +18,7 @@ const SecondaryNav = () => {
         </div>
         <div className={`overlay ${isOpen ? "show" : ""}`}>
             <ul className="overlay__list">
-                <li className="nav__list-item"><Link to="/more">About</Link></li>
+                <li className="nav__list-item"><Link to="/about">About</Link></li>
                 <li className="nav__list-item"><Link to="/contact">Contact</Link></li>
             </ul>
             <div className="close" onClick={() => setIsOpen(!isOpen)}>
