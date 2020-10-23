@@ -18,28 +18,55 @@
         color: $primary-color;
     }
 
-    .hamburger {
-        position: relative;
-        width: 45px;
-        height: 35px;
-        margin-right: 1rem;
-        cursor: pointer;
+}
+.hamburger {
+    position: relative;
+    width: 45px;
+    height: 35px;
+    margin-right: 1rem;
+    cursor: pointer;
+    z-index: 1001;
 
-        &__bar {
-            position: absolute;
+    &__bar {
+        position: absolute;
+        height: 3px;
+        width: 40px;
+        transition: all .5s ease-in-out;
+
+        &.active {
+            background: $secondary-color;
+        }
+        &.closed {
             background: $primary-color;
-            height: 3px;
-            width: 40px;
+        }
 
-            &:nth-child(1) {
-                top: 0;
-            }
-            &:nth-child(2) {
-                top: 12px;
-            }
-            &:nth-child(1) {
-                top: 24px;
-            }
+        &:nth-child(1) {
+            top: 0;
+        }
+        &:nth-child(2) {
+            top: 12px;
+            opacity: 1;
+        }
+        &:nth-child(1) {
+            top: 24px;
+        }
+
+        .open > & {
+            transition: all .5s ease-in-out;
+        }
+        .open > &:nth-child(1) {
+            top: 0;
+            transform: rotate(45deg);
+            transition: all .5s ease-in-out;
+        }
+        .open > &:nth-child(2) {
+            opacity: 0;
+            transition: all .5s ease-in-out;
+        }
+        .open > &:nth-child(3) {
+            top: 0;
+            transform: rotate(135deg);
+            transition: all .5s ease-in-out;
         }
     }
 }
@@ -65,30 +92,30 @@
         opacity: 1;
     }
 
-    .close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        width: 45px;
-        height: 35px;
-        cursor: pointer;
+    // .close {
+    //     position: absolute;
+    //     top: 1rem;
+    //     right: 1rem;
+    //     width: 45px;
+    //     height: 35px;
+    //     cursor: pointer;
 
-        &__bar {
-            position: absolute;
-            background: $secondary-color;
-            height: 3px;
-            width: 40px;
+    //     &__bar {
+    //         position: absolute;
+    //         background: $secondary-color;
+    //         height: 3px;
+    //         width: 40px;
 
-            &:nth-child(1) {
-                top: 1rem;
-                transform: rotate(45deg);
-            }
-            &:nth-child(2) {
-                top: 1rem;
-                transform: rotate(-45deg);
-            }
-        }
-    }
+    //         &:nth-child(1) {
+    //             top: 1rem;
+    //             transform: rotate(45deg);
+    //         }
+    //         &:nth-child(2) {
+    //             top: 1rem;
+    //             transform: rotate(-45deg);
+    //         }
+    //     }
+    // }
 
     &__list {
         font-size: 3rem;
