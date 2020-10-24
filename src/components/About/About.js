@@ -4,6 +4,9 @@ import '../../sass/_about.scss'
 import SecondaryNav from '../SecondaryNav/SecondaryNav'
 
 import profile from '../../assets/images/profile/profile.jpg'
+import laurel1 from '../../assets/images/profile/laurels/laurel1.jpg'
+import laurel2 from '../../assets/images/profile/laurels/laurel2.png'
+import laurel3 from '../../assets/images/profile/laurels/laurel3.png'
 
 const About = () => {
     return (
@@ -20,6 +23,17 @@ const About = () => {
                         Inés is an alumna of the Imagine Science Film Festival, and with “You Play Here”, her interactive documentary about immigration and the public space, she was part of DCTV’s Documentary WIP Lab with Yance Ford. She was a 2019-20 mentee at the Karen Schmeer Diversity in The Edit Room Fellowship.
                         Inés speaks Spanish, French, Portuguese, and English, which enables her to edit projects from all over the world.
                     </p>
+                    <div className="about-content__laurels">
+                        <div className="laurel">
+                            <img src={laurel1} alt="Inés Vogelfang | Laurels" />
+                        </div>
+                        <div className="laurel">
+                            <img src={laurel2} alt="Inés Vogelfang | Laurels" />
+                        </div>
+                        <div className="laurel">
+                            <img src={laurel3} alt="Inés Vogelfang | Laurels" />
+                        </div>
+                    </div>
                 </div>
             </div>
             <h1>About</h1>
