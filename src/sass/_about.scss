@@ -7,41 +7,75 @@
 
     &__inner {
         display: flex;
+        flex-direction: row;
+        justify-content: center;
         padding: 1.5rem;
+        width: 100%;
+        max-width: 1600px;
+        min-width: 1000px;
+        margin: 0 auto;
 
-        .about-profile {
-            width: 80%;
-            animation: slide-right 1s ease-in;
-            
-            img {
+        .about-left {
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            padding-left: 115px;
+
+            .about-profile {
                 width: 100%;
-            }
-        }
-
-        .about-content {
-            width: 90%;
-            color: $primary-color;
-            margin-left: 1rem;
-            font-size: 1.2rem;
-            line-height: 1.4;
-            animation: slide-left 1s ease-in;
-            
-            p:nth-child(1) {
-                margin-top: 0;
+                animation: slide-right 1s ease-in;
+                align-self: flex-end;
+                margin-bottom: 2rem;
+                
+                img {
+                    width: 100%;
+                }
             }
 
-            &__laurels {
+            .about-content__laurels {
                 width: 100%;
                 display: flex;
-                justify-content: space-around;
+                justify-content: space-between;
+                align-self: flex-end;
+                animation: slide-up 1s ease-in;
 
-                .laurel {
-                    width: 10rem;
+                .dctv {
+                    width: 4.2rem;
 
                     img {
                         width: 100%;
                     }
                 }
+
+                .soul {
+                    width: 6rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .laurel {
+                    width: 7.5rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .about-content {
+            width: 100%;
+            color: $primary-color;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            line-height: 1.4;
+            padding-right: 115px;
+            animation: slide-left 1s ease-in;
+            
+            p:nth-child(1) {
+                margin-top: 0;
             }
         }
     }
@@ -52,15 +86,28 @@
     
         &__inner {
             flex-direction: column;
+            min-width: 100%;
 
-            .about-profile {
+            .about-left {
                 width: 100%;
-                margin-bottom: 1rem;
-            }
+                padding-left: 0;
 
+                .about-profile {
+                    width: 100%;
+                }
+    
+                .about-content__laurels {
+                    width: 90%;
+                    margin: 0 auto;
+                    margin-bottom: 1rem;
+                }
+            }
+    
             .about-content {
                 width: 100%;
-                margin: 0;
+                font-size: 1.5rem;
+                margin-left: 0rem;
+                padding-right: 0px;
             }
         }
     }
@@ -85,5 +132,16 @@
     100% {
         opacity: 1;
         transform: translateX(0);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(200px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

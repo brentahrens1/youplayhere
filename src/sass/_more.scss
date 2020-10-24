@@ -116,7 +116,12 @@
     .more {
     
         .contact-form {
-            width: calc(100% - 2rem);
+
+            h1 {
+                font-size: 1.3rem;
+            }
+            
+            width: calc(100% - 4rem);
             max-width: 100%;
         }
     }
