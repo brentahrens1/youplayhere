@@ -37,7 +37,11 @@ import landingAudio from '../../assets/audio/nyc-landing.mp3'
 
 import landingVideo from '../../assets/LandingVideo/landing.mp4'
 
-import ReactAudioPlayer from 'react-audio-player';
+import ReactAudioPlayer from 'react-audio-player'
+
+// Small screen photo
+
+import smallScreen from '../../assets/images/small-screen.png'
 
 const PlayHere = () => {
     const [ showVid, setShowVid ] = useState(false)
@@ -171,6 +175,11 @@ const PlayHere = () => {
                             <div className="close__bar" />
                             <div className="close__bar" />
                         </div>
+                    </div>
+                </div>
+                <div className="small-screen">
+                    <div className="small-screen__inner">
+                        <h1>This is meant to be experienced on a larger screen.</h1>
                     </div>
                 </div>
             </div>
