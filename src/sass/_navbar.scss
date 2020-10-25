@@ -31,7 +31,7 @@
         position: absolute;
         height: 2px;
         width: 40px;
-        transition: all .3s ease-in-out;
+        transition: all .1s ease-in-out;
         background: $primary-color;
 
         &:nth-child(1) {
@@ -46,37 +46,36 @@
         }
 
         .open > & {
-            transition: all .3s ease-in-out;
+            transition: all .1s ease-in-out;
         }
         .open > &:nth-child(1) {
             top: 1.3rem;
             right: 0;
             width: 35px;
             transform: rotate(90deg);
-            transition: all .3s ease-in-out;
+            transition: all .1s ease-in-out;
         }
         .open > &:nth-child(2) {
             top: 1.3rem;
             right: 10px;
             width: 35px;
             transform: rotate(90deg);
-            transition: all .3s ease-in-out;
+            transition: all .1s ease-in-out;
         }
         .open > &:nth-child(3) {
             top: 1.3rem;
             right: 20px;
             width: 35px;
             transform: rotate(90deg);
-            transition: all .3s ease-in-out;
+            transition: all .1s ease-in-out;
         }
     }
 }
 
 .overlay {
     position: absolute;
-    width: 40rem;
     top: 0;
-    right: -100%;
+    right: 0rem;
     height: 5rem;
     background: $secondary-color;
     color: $primary-color;
@@ -85,11 +84,14 @@
     justify-content: flex-start;
     z-index: 1000;
     opacity: 0;
-    transition: all .5s ease-in-out;
+    width:40rem;
+    visibility: hidden;
+    transition: all .1s ease-in;
 
     &.show {
-        right: 0;
         opacity: 1;
+        right: 5rem;
+        visibility: visible;
     }
 
     &__list {

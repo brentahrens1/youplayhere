@@ -69,6 +69,7 @@ const PlayHere = () => {
             src={landingAudio}
             autoPlay
             loop
+            muted
         />)
         setStopBounce(!stopBounce)
 
@@ -92,6 +93,7 @@ const PlayHere = () => {
             src={landingAudio}
             autoPlay
             loop
+            muted
         />)
     }, [])
 
