@@ -12,7 +12,6 @@
         padding: 1.5rem;
         width: 100%;
         max-width: 1600px;
-        min-width: 1000px;
         margin: 0 auto;
 
         .about-left {
@@ -76,6 +75,21 @@
             
             p:nth-child(1) {
                 margin-top: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .about {
+    
+        &__inner {
+            .about-left {
+                padding-left: 1rem;
+            }
+
+            .about-content {
+                padding-right: 1rem;
             }
         }
     }
