@@ -41,7 +41,7 @@ import ReactAudioPlayer from 'react-audio-player'
 
 // Small screen photo
 
-import smallScreen from '../../assets/images/small-screen.png'
+import iPad from '../../assets/images/icons/ipad.png'
 
 const PlayHere = () => {
     const [ showVid, setShowVid ] = useState(false)
@@ -181,7 +181,10 @@ const PlayHere = () => {
                 </div>
                 <div className="small-screen">
                     <div className="small-screen__inner">
-                        <h1>This is meant to be experienced on a larger screen.</h1>
+                        <h1>Rotate your screen to play.</h1>
+                        <div className="ipad">
+                            <img src={iPad} alt="Ines Vogelfang | Rotate your screen" />
+                        </div>
                     </div>
                 </div>
             </div>

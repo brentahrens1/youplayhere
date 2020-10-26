@@ -115,10 +115,15 @@
 @media (max-width: 900px) {
     .overlay {
         width: 100%;
+        
+        &.show {
+            right: 0;
+        }
 
         &__list {
+            width: 80%;
             margin-left: 2rem;
-            margin-right: 7rem;
+            margin-right: 3rem;
         }
     }
 
