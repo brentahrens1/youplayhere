@@ -42,6 +42,7 @@ import ReactAudioPlayer from 'react-audio-player'
 // Small screen photo
 
 import iPad from '../../assets/images/icons/ipad.png'
+import macBook from '../../assets/images/icons/laptop.png'
 
 const PlayHere = () => {
     const [ showVid, setShowVid ] = useState(false)
@@ -184,6 +185,20 @@ const PlayHere = () => {
                         <h1>Rotate your screen to play.</h1>
                         <div className="ipad">
                             <img src={iPad} alt="Ines Vogelfang | Rotate your screen" />
+                        </div>
+                    </div>
+                </div>
+                <div className="mobile-screen">
+                    <div className="mobile-screen__inner">
+                        <h1>You cannot play here.</h1>
+                        <p>Please use a tablet or desktop to enjoy the experience.</p>
+                        <div className="mobile-flex">
+                            <div className="ipad">
+                                <img src={iPad} alt="Ines Vogelfang | You Cannot Play Here" />
+                            </div>
+                            <div className="macbook">
+                                <img src={macBook} alt="Ines Vogelfang | You Cannot Play Here" />
+                            </div>
                         </div>
                     </div>
                 </div>
