@@ -32,6 +32,7 @@
             
             h1 {
                 font-family: 'Cinzel', serif;
+                letter-spacing: -2px;
                 animation: moveDown 1s ease-in;
                 font-size: 72px;
                 text-transform: uppercase;
@@ -56,9 +57,10 @@
                 animation: moveLeft 1s ease-in;
             }
     
-            button {
+            .button {
                 @include button;
                 animation: moveUp 1s ease-in;
+                margin: 0 auto;
             }
         }
 

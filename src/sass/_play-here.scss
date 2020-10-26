@@ -401,12 +401,174 @@
 
 // Media Queries
 
+@media (max-width: 1050px) {
+    .play {
+    
+        &__grid {
+            .symbol {
+                width: 35%;
+            }
+
+            .three {
+                grid-row: 2 / 8;
+                align-self: start;
+            }
+    
+            // Symbols
+    
+            .symbol-one {
+                align-self: center;
+                width: 85%;
+            }
+    
+            .symbol-two {
+                align-self: start;
+                grid-row: 6 / span 1;
+                width: 100%;
+            }
+    
+            .symbol-three {
+                align-self: center;
+                width: 55%;
+            }
+    
+            .symbol-four {
+                grid-row: 4 / span 1;
+                align-self: center;
+                width: 55%;
+            }
+
+            .symbol-five {
+                grid-row: 7 / span 1;
+                align-self: start;
+                width: 50%;
+            }
+    
+            .symbol-six {
+                grid-row: 5 / span 1;
+                align-self: start;
+                width: 60%;
+            }
+    
+            .symbol-seven {
+                grid-row: 4 / span 1;
+                width: 60%;
+            }
+    
+            .symbol-eight {
+                grid-row: 2 / span 1;
+                align-self: end;
+            }
+
+            .symbol-nine {
+                width: 60%;
+            }
+    
+            .symbol-twelve {
+                align-self: start;
+            }
+    
+            .symbol-thirteen {
+                grid-row: 5 / span 1;
+                align-self: center;
+                width: 70%;
+            }
+
+            .symbol-fourteen {
+                grid-row: 6 / span 1;
+                align-self: end;
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media (max-width: 850px) {
+    .play {
+    
+        &__grid {
+            .symbol {
+                width: 35%;
+            }
+    
+            // Symbols
+    
+            .symbol-one {
+                align-self: start;
+                width: 85%;
+            }
+    
+            .symbol-two {
+                align-self: center;
+                grid-row: 5 / span 1;
+                width: 100%;
+            }
+    
+            .symbol-three {
+                align-self: start;
+                width: 55%;
+            }
+    
+            .symbol-four {
+                grid-row: 4 / span 1;
+                align-self: end;
+                width: 55%;
+            }
+
+            .symbol-five {
+                grid-row: 6 / span 1;
+                align-self: center;
+                width: 50%;
+            }
+    
+            .symbol-six {
+                grid-row: 5 / span 1;
+                align-self: start;
+                width: 60%;
+            }
+    
+            .symbol-seven {
+                grid-row: 4 / span 1;
+                width: 60%;
+            }
+    
+            .symbol-eight {
+                grid-row: 2 / span 1;
+                align-self: center;
+            }
+
+            .symbol-nine {
+                width: 60%;
+                grid-row: 1 / span 1;
+                align-self: end;
+            }
+    
+            .symbol-twelve {
+                grid-row: 2 / span 1;
+                align-self: end;
+            }
+    
+            .symbol-thirteen {
+                grid-row: 5 / span 1;
+                align-self: center;
+                width: 70%;
+            }
+
+            .symbol-fourteen {
+                grid-row: 6 / span 1;
+                align-self: start;
+                width: 75%;
+            }
+        }
+    }
+}
+
 @media (min-height: 1000px) and (max-width: 1300px) {
     .play {
     
         &__grid {
             .symbol {
-                width: 43%;
+                width: 35%;
             }
     
             // neightborhoods

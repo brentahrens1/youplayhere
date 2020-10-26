@@ -19,7 +19,7 @@ const Home = () => {
                        project you'll hear me trying to find the answer while you navigate 
                        through a made up map of New York City's public spaces
                     </p>
-                    <button><h2><Link to="/play">Play Here</Link></h2></button>
+                    <h2 className="button"><Link to="/play">Play Here</Link></h2>
                 </div>
                 <video autoPlay muted loop className="landing-video">
                     <source src={landingVideo} type="video/mp4" />
