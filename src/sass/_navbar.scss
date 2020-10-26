@@ -13,6 +13,8 @@
 .secondary-nav {
     @include nav;
     color: $primary-color;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
 
     a:link, a:visited {
         color: $primary-color;
@@ -31,6 +33,7 @@
         position: absolute;
         height: 2px;
         width: 40px;
+        border-radius: 30px;
         transition: all .1s ease-in-out;
         background: $primary-color;
 
@@ -95,7 +98,9 @@
     }
 
     &__list {
-        font-size: 1.2rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+        font-size: 1.4rem;
         display: flex;
         justify-content: space-between;
         width: 80%;

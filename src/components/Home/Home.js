@@ -11,8 +11,8 @@ const Home = () => {
         <div className="home">
             <div className="home__inner">
                 <div className="home__content">
+                    <p className="name">Ines Vogelfang | Interactive Map</p>
                     <h1>You Play Here</h1>
-                    <h2>Ines Vogelfang | Interactive Map</h2>
                     <p>
                        As Immigrants, how do we find our communities? 
                        Can it be through a recreational activity in a public space? / In this
