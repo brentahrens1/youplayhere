@@ -401,9 +401,165 @@
 
 // Media Queries
 
-@media (max-height: 900px) {
+@media (min-height: 1000px) and (max-width: 1300px) {
     .play {
+    
         &__grid {
+            .symbol {
+                width: 43%;
+            }
+    
+            // neightborhoods
+    
+            .one {
+                grid-row: 6 / span 3;
+            }
+    
+            .two {
+                grid-row: 6 / span 3;
+            }
+    
+            .three {
+                grid-row: 2 / 8;
+            }
+    
+            // Symbols
+    
+            .symbol-one {
+                align-self: end;
+                width: 85%;
+            }
+    
+            .symbol-two {
+                align-self: start;
+                width: 100%;
+            }
+    
+            .symbol-three {
+                align-self: center;
+                width: 55%;
+            }
+    
+            .symbol-four {
+                grid-row: 5 / span 1;
+                align-self: center;
+                width: 55%;
+            }
+
+            .symbol-five {
+                width: 50%;
+            }
+    
+            .symbol-six {
+                grid-row: 6 / span 1;
+                align-self: start;
+                width: 60%;
+            }
+    
+            .symbol-seven {
+                grid-row: 5 / span 1;
+                width: 60%;
+            }
+    
+            .symbol-eight {
+                grid-row: 2 / span 1;
+                align-self: end;
+            }
+
+            .symbol-nine {
+                width: 60%;
+            }
+    
+            .symbol-twelve {
+                align-self: start;
+            }
+    
+            .symbol-thirteen {
+                grid-row: 6 / span 1;
+                align-self: center;
+                width: 70%;
+            }
+
+            .symbol-fourteen {
+                width: 75%;
+            }
+        }
+    }
+}
+
+@media (min-height: 1000px) and (max-width: 1000px) {
+
+    .play {
+    
+        &__grid {
+    
+            // Symbols
+    
+            .symbol-one {
+                width: 80%;
+            }
+    
+            .symbol-two {
+                grid-row: 5 / span 1;
+                width: 100%;
+                align-self: start;
+            }
+    
+            .symbol-three {
+                grid-row: 5 / span 1;
+                align-self: end;
+            }
+    
+    
+            .symbol-four {
+                grid-column: 3 / span 1;
+                grid-row: 5 / span 1;
+                justify-self: start;
+            }
+    
+            .symbol-six {
+                grid-row: 6 / span 1;
+                align-self: start;
+            }
+    
+            .symbol-seven {
+                grid-row: 5 / span 1;
+            }
+    
+            .symbol-eight {
+                grid-row: 2 / span 1;
+                align-self: start;
+                transform: translateY(15px);
+                width: 45%;
+            }
+    
+            .symbol-nine {
+                justify-self: center;
+            }
+            
+            .symbol-ten {
+                align-self: start;
+            }
+    
+            .symbol-eleven {
+                width: 40%;
+            }
+    
+            .symbol-twelve {
+                grid-row: 2 / span 1;
+                align-self: flex-end;
+                width: 45%;
+            }
+    
+            .symbol-thirteen {
+                grid-row: 6 / span 1;
+                align-self: start;
+                width: 75%;
+            }
+    
+            .symbol-fourteen {
+                width: 90%;
+            }
         }
     }
 }
