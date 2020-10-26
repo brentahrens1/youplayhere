@@ -9,6 +9,7 @@
 
         h1 {
             text-align: center;
+            font-family: 'Roboto', sans-serif;
         }
 
         h1, label {
@@ -19,6 +20,7 @@
             padding: .5rem;
             font-size: 1.2rem;
             animation: slideRight 1s ease-in;
+            font-family: 'Roboto', sans-serif;
         }
 
         h1 {
@@ -44,6 +46,7 @@
             cursor: pointer;
             text-transform: uppercase;
             animation: slideUp 1s ease-in;
+            font-family: 'Roboto', sans-serif;
         }
 
         display: flex;
