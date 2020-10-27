@@ -55,21 +55,21 @@
         .open > &:nth-child(1) {
             top: .9rem;
             right: 0;
-            width: 35px;
+            width: 32px;
             transform: rotate(90deg);
             transition: all .1s ease-in-out;
         }
         .open > &:nth-child(2) {
             top: .9rem;
             right: 8px;
-            width: 35px;
+            width: 32px;
             transform: rotate(90deg);
             transition: all .1s ease-in-out;
         }
         .open > &:nth-child(3) {
             top: .9rem;
             right: 16px;
-            width: 35px;
+            width: 32px;
             transform: rotate(90deg);
             transition: all .1s ease-in-out;
         }
@@ -79,7 +79,7 @@
 .overlay {
     position: absolute;
     top: 0;
-    right: 0rem;
+    right: -3rem;
     height: 5rem;
     background: $secondary-color;
     color: $primary-color;
@@ -90,12 +90,16 @@
     opacity: 0;
     width:40rem;
     visibility: hidden;
-    transition: all .1s ease-in;
+    transition: opacity .1s ease-in-out, right .1s ease-in-out;
 
     &.show {
         opacity: 1;
-        right: 5rem;
+        right: 0;
+        top: 0;
+        width: 50%;
         visibility: visible;
+        display: flex;
+        justify-content: flex-end;
     }
 
     &__list {
@@ -104,8 +108,9 @@
         font-size: 1.4rem;
         display: flex;
         justify-content: space-between;
-        width: 80%;
+        width: 100%;
         padding-left: 0;
+        margin-right: 6rem;
 
         a:link, a:visited {
             color: $primary-color;
@@ -114,19 +119,14 @@
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 500px) {
     .overlay {
-        width: 100%;
-        
         &.show {
-            right: 0;
+            width: 100%;
         }
-
         &__list {
-            width: 80%;
-            margin-left: 2rem;
-            margin-right: 3rem;
+            width: 70%;
+            margin-right: 5rem;
         }
     }
-
-}
+} 

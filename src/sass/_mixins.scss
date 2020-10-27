@@ -73,9 +73,16 @@
         margin: 0 1.5rem;
         padding: 0;
         cursor: pointer;
+        z-index: 1001;
         
         h2 {
             font-size: 18px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        &__logo {
+            z-index: 1000;
         }
     }
 }
