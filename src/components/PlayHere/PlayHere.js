@@ -82,13 +82,6 @@ const PlayHere = () => {
         isActive > 1 ? setIsActive(isActive - 1) : setIsActive(14)
     }
 
-    const handleHover = () => {
-        setAudio( <ReactAudioPlayer
-            src={bleep}
-            autoPlay
-        />)
-    }
-
     useEffect(() => {
         setTimeout(function() {
             setIntroAnimation(!introAnimation)
