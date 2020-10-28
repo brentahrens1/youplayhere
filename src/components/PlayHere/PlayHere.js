@@ -191,13 +191,13 @@ const PlayHere = () => {
                 <div className="mobile-screen">
                     <div className="mobile-screen__inner">
                         <h1>You cannot play here.</h1>
-                        <p>Please use a tablet or desktop to enjoy the experience.</p>
+                        <p>Please use tablet or desktop to enjoy the experience.</p>
                         <div className="mobile-flex">
-                            <div className="ipad">
-                                <img src={iPad} alt="Ines Vogelfang | You Cannot Play Here" />
-                            </div>
                             <div className="macbook">
                                 <img src={macBook} alt="Ines Vogelfang | You Cannot Play Here" />
+                            </div>
+                            <div className="ipad">
+                                <img src={iPad} alt="Ines Vogelfang | You Cannot Play Here" />
                             </div>
                         </div>
                     </div>

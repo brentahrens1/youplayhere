@@ -92,6 +92,9 @@
             }
 
             .mobile-flex {
+                display: flex;
+                flex-direction: column;
+                
                 .ipad, .macbook {
                     width: 150px;
     
