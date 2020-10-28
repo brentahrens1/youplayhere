@@ -15,17 +15,17 @@ const About = () => {
             <div className="about__inner">
                 <div className="about-left">
                     <div className="about-profile">
-                        <img src={profile} alt="Inés Vogelfang | Profile Picture" />
+                        <img src={profile} alt="Inés Vogelfang | Profile" />
                     </div>
                     <div className="about-content__laurels">
                         <div className="laurel">
                             <img src={laurel2} alt="Inés Vogelfang | Laurels" />
                         </div>
                         <div className="soul">
-                            <img src={laurel3} alt="Inés Vogelfang | Laurels" />
+                            <img src={laurel3} alt="Inés Vogelfang | Laurels 2" />
                         </div>
                         <div className="dctv">
-                            <img src={laurel1} alt="Inés Vogelfang | Laurels" />
+                            <img src={laurel1} alt="Inés Vogelfang | Laurels 3" />
                         </div>
                     </div>
                 </div>
