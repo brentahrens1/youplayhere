@@ -319,6 +319,7 @@
             grid-column: 7 / span 1;
             grid-row: 1 / span 1; 
             justify-self: end;
+            width: 35%;
 
             &.intro-animation {
                 animation: slideRight 2s ease-in;

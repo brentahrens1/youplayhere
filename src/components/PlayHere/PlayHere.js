@@ -152,10 +152,10 @@ const PlayHere = () => {
                         <img id="6" onClick={handleClick} src={cricketBug} alt="Uptown" />
                     </div>
                     <div className={`play__grid-piece symbol symbol-ten ${introAnimation ? 'intro-animation' : ''} ${stopBounce && isActive == 5 ? "active-5" : ''}`}>
-                        <img id="5" onClick={handleClick} src={cricketWhite} alt="Uptown" />
+                        <img id="5" onClick={handleClick} src={globe} alt="Uptown" />
                     </div>
                     <div className={`play__grid-piece symbol symbol-eleven ${introAnimation ? 'intro-animation' : ''} ${stopBounce && isActive == 4 ? "active-4" : ''}`}>
-                        <img id="4" onClick={handleClick} src={globe} alt="Uptown" />
+                        <img id="4" onClick={handleClick} src={cricketWhite} alt="Uptown" />
                     </div>
                     <div className={`play__grid-piece symbol symbol-twelve ${introAnimation ? 'intro-animation' : ''} ${stopBounce && isActive == 3 ? "active-3" : ''}`}>
                         <img id="3" onClick={handleClick} src={cup} alt="Uptown" />

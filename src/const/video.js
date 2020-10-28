@@ -44,7 +44,7 @@ export const videos = [
         id: "4",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video4} type="video/mp4" />
+                        <source src={video5} type="video/mp4" />
                     </video>
                 </div>
     },
@@ -52,7 +52,7 @@ export const videos = [
         id: "5",
         video:  <div className="video-one">
                     <video controls autoPlay className='video-show'>
-                        <source src={video5} type="video/mp4" />
+                        <source src={video4} type="video/mp4" />
                     </video>
                 </div>
     },

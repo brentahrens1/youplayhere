@@ -9,7 +9,7 @@ const SecondaryNav = () => {
     return (
         <div className="secondary-nav">
             <div className="nav__logo">
-                <h2><Link to="/play">You Play Here</Link></h2>
+                <h2><Link to="/">You Play Here</Link></h2>
             </div>
             <div className={`hamburger ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
                 <div className="hamburger__bar" />
@@ -18,6 +18,7 @@ const SecondaryNav = () => {
             </div>
             <div className={`overlay ${isOpen ? "show" : ""}`}>
                 <ul className="overlay__list">
+                    <li className="nav__list-item"><Link to="/play">Map</Link></li>
                     <li className="nav__list-item"><Link to="/about">About</Link></li>
                     <li className="nav__list-item"><Link to="/contact">Contact</Link></li>
                 </ul>

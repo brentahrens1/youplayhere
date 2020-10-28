@@ -11,11 +11,11 @@ const Home = () => {
         <div className="home">
             <div className="home__inner">
                 <div className="home__content">
-                    <p className="name">Ines Vogelfang | Interactive Map</p>
+                    <p className="name">Inés Vogelfang | Interactive Map</p>
                     <h1>You Play Here</h1>
                     <p>
                        As Immigrants, how do we find our communities? 
-                       Can it be through a recreational activity in a public space? / In this
+                       Can it be through a recreational activity in a public space?<br />In this
                        project you'll hear me trying to find the answer while you navigate 
                        through a made up map of New York City's public spaces
                     </p>
