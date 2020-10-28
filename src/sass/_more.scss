@@ -105,17 +105,17 @@
 //     }
 // }
 
-// @media (max-width: 800px) {
-//     .more {
+@media (max-width: 800px) {
+    .more {
     
-//         .contact-form {
+        .contact-form {
 
-//             h1 {
-//                 font-size: 1.3rem;
-//             }
+            h1 {
+                font-size: 1.3rem;
+            }
             
-//             width: calc(100% - 4rem);
-//             max-width: 100%;
-//         }
-//     }
-// }
+            width: calc(100% - 4rem);
+            max-width: 100%;
+        }
+    }
+}
