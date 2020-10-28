@@ -206,7 +206,7 @@ const PlayHere = () => {
             :
             <>
             {audio}
-            <video autoPlay muted loop className="landing-video">
+            <video playsinline autoPlay muted loop className="landing-video">
                     <source src={landingVideo} type="video/mp4" />
             </video>
             </>
