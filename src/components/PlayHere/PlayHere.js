@@ -33,7 +33,13 @@ import uptown from '../../assets/images/maps/_Uptown_02.png'
 
 import { videos } from '../../const/video'
 
-import landingAudio from '../../assets/audio/nyc-landing.mp3'
+// audio
+
+import landingAudio from '../../assets/audio/streets.mp3'
+
+import trainAudio from '../../assets/audio/trains.mp3'
+
+import bleep from '../../assets/audio/bleep.mp3'
 
 import landingVideo from '../../assets/LandingVideo/landing.mp4'
 
@@ -70,11 +76,17 @@ const PlayHere = () => {
             src={landingAudio}
             autoPlay
             loop
-            muted
         />)
         setStopBounce(!stopBounce)
 
         isActive > 1 ? setIsActive(isActive - 1) : setIsActive(14)
+    }
+
+    const handleHover = () => {
+        setAudio( <ReactAudioPlayer
+            src={bleep}
+            autoPlay
+        />)
     }
 
     useEffect(() => {
@@ -86,15 +98,18 @@ const PlayHere = () => {
     useEffect(() => {
         setTimeout(function() {
             setEndClip(!endClip)
+            setAudio( <ReactAudioPlayer
+                src={landingAudio}
+                autoPlay
+                loop
+            />)
         }, 2500)
     }, [])
 
     useEffect(() => {
         setAudio( <ReactAudioPlayer
-            src={landingAudio}
+            src={trainAudio}
             autoPlay
-            loop
-            muted
         />)
     }, [])
 

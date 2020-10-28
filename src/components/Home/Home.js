@@ -14,8 +14,8 @@ const Home = () => {
                     <p className="name">Inés Vogelfang | Interactive Map</p>
                     <h1>You Play Here</h1>
                     <p>
-                       As Immigrants, how do we find our communities? 
-                       Can it be through a recreational activity in a public space?<br />In this
+                       As Immigrants, how do we find our communities?<br />
+                       Can it be through a recreational activity in a public space?<br /> In this
                        project you'll hear me trying to find the answer while you navigate 
                        through a made up map of New York City's public spaces
                     </p>
