@@ -13,8 +13,22 @@
         }
     }
 
+    .pause-btn {
+        button {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            @include button;
+            border: 2px solid $secondary-color;
+            background: #000;
+            color: #fff;
+            padding: .3rem;
+            width: 5rem;
+        }
+    }
     
     &__inner {
+        
         .home__content {
     
             @include center;
@@ -33,7 +47,6 @@
             h1 {
                 font-family: 'Cinzel', serif;
                 letter-spacing: -2px;
-                animation: moveDown 1s ease-in;
                 font-size: 72px;
                 text-transform: uppercase;
                 line-height: 1;
@@ -41,7 +54,6 @@
             }
     
             .name {
-                animation: moveRight 1s ease-in;
                 font-family: 'Roboto', sans-serif;
                 font-size: 24px;
                 margin-bottom: 16px;
@@ -54,12 +66,10 @@
                 width: 520px;
                 margin: 0 auto;
                 margin-bottom: 34px;
-                animation: moveLeft 1s ease-in;
             }
     
             .button {
                 @include button;
-                animation: moveUp 1s ease-in;
                 margin: 0 auto;
             }
         }

@@ -59,6 +59,7 @@ const PlayHere = () => {
     const [ stopBounce, setStopBounce ] = useState(true)
     const [ endClip, setEndClip ] = useState(false)
     const [ introAnimation, setIntroAnimation ] = useState(true)
+    const [ toggleBtn, setToggleBtn ] = useState(false)
 
     const handleClick = (e) => {
         setShowVid(true)
@@ -92,6 +93,23 @@ const PlayHere = () => {
 
     const clearHover = () => {
         setDoBleep(null)
+    }
+
+    const stopPlayer = () => {
+        setAudio( <ReactAudioPlayer
+            src={landingAudio}
+            muted
+        />)
+        setToggleBtn(!toggleBtn)
+    }
+    
+    const resumePlayer = () => {
+        setAudio( <ReactAudioPlayer
+            src={landingAudio}
+            autoPlay
+            loop
+        />)
+        setToggleBtn(!toggleBtn)
     }
 
     useEffect(() => {
@@ -231,6 +249,16 @@ const PlayHere = () => {
                     <source src={landingVideo} type="video/mp4" />
             </video>
             </>
+        }
+        {
+            toggleBtn ? 
+            <div className="pause-btn">
+                <button onClick={resumePlayer}>Resume</button>
+            </div>
+            :
+            <div className="pause-btn">
+                <button onClick={stopPlayer}>Pause</button>
+            </div>
         }
         </div>
     )
