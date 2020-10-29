@@ -80,6 +80,7 @@ const PlayHere = () => {
             loop
         />)
         setStopBounce(!stopBounce)
+        setToggleBtn(!toggleBtn)
 
         isActive > 1 ? setIsActive(isActive - 1) : setIsActive(14)
     }
