@@ -9,36 +9,35 @@ import landingAudio from '../../assets/audio/streets.mp3'
 import ReactAudioPlayer from 'react-audio-player'
 
 const Home = () => {
-    const [ audio, setAudio ] = useState(null)
-    const [ toggleBtn, setToggleBtn ] = useState(false)
+    // const [ audio, setAudio ] = useState(null)
+    // const [ toggleBtn, setToggleBtn ] = useState(false)
 
-    const stopPlayer = () => {
-        setAudio( <ReactAudioPlayer
-            src={landingAudio}
-            muted
-        />)
-        setToggleBtn(!toggleBtn)
-    }
-    const resumePlayer = () => {
-        setAudio( <ReactAudioPlayer
-            src={landingAudio}
-            autoPlay
-            loop
-        />)
-        setToggleBtn(!toggleBtn)
-    }
+    // const stopPlayer = () => {
+    //     setAudio( <ReactAudioPlayer
+    //         src={landingAudio}
+    //         muted
+    //     />)
+    //     setToggleBtn(!toggleBtn)
+    // }
+    // const resumePlayer = () => {
+    //     setAudio( <ReactAudioPlayer
+    //         src={landingAudio}
+    //         autoPlay
+    //         loop
+    //     />)
+    //     setToggleBtn(!toggleBtn)
+    // }
 
-    useEffect(() => {
-            setAudio( <ReactAudioPlayer
-                src={landingAudio}
-                autoPlay
-                loop
-            />)
-    }, [])
+    // useEffect(() => {
+    //         setAudio( <ReactAudioPlayer
+    //             src={landingAudio}
+    //             autoPlay
+    //             loop
+    //         />)
+    // }, [])
 
     return (
         <div className="home">
-            {audio}
             <div className="home__inner">
                 <div className="home__content">
                     <p className="name">Inés Vogelfang | Interactive Map</p>
@@ -55,7 +54,7 @@ const Home = () => {
                     <source src={landingVideo} type="video/mp4" />
                 </video>
             </div>
-            {
+            {/* {
             toggleBtn ? 
             <div className="pause-btn">
                 <button onClick={resumePlayer}>Resume</button>
@@ -64,7 +63,7 @@ const Home = () => {
             <div className="pause-btn">
                 <button onClick={stopPlayer}>Pause</button>
             </div>
-            }
+            } */}
         </div>
     )
 }
