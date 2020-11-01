@@ -75,14 +75,15 @@ const PlayHere = () => {
     const handleClear = (e) => {
         setShowVid(!showVid)
         setCurrentVid('')
-        setAudio( <ReactAudioPlayer
-            src={landingAudio}
-            autoPlay
-            loop
-        />)
+        if (!toggleBtn) {
+            setAudio( <ReactAudioPlayer
+                src={landingAudio}
+                autoPlay
+                loop
+            />)
+        }
+        console.log(setToggleBtn)
         setStopBounce(!stopBounce)
-        setToggleBtn(!toggleBtn)
-
         isActive > 1 ? setIsActive(isActive - 1) : setIsActive(14)
     }
 
