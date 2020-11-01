@@ -60,6 +60,7 @@ const PlayHere = () => {
     const [ endClip, setEndClip ] = useState(false)
     const [ introAnimation, setIntroAnimation ] = useState(true)
     const [ toggleBtn, setToggleBtn ] = useState(false)
+    const [ muteToggle, setMuteToggle ] = useState(false)
 
     const handleClick = (e) => {
         setShowVid(true)
@@ -101,6 +102,7 @@ const PlayHere = () => {
             src={landingAudio}
             muted
         />)
+        setMuteToggle(!muteToggle)
         setToggleBtn(!toggleBtn)
     }
     
@@ -110,6 +112,7 @@ const PlayHere = () => {
             autoPlay
             loop
         />)
+        setMuteToggle(!muteToggle)
         setToggleBtn(!toggleBtn)
     }
 
@@ -253,12 +256,12 @@ const PlayHere = () => {
         }
         {
             toggleBtn ? 
-            <div className="pause-btn">
-                <button onClick={resumePlayer}>Resume</button>
+            <div className={`pause-btn ${muteToggle ? "active" : ""}`}>
+                <button onClick={resumePlayer}>unmute</button>
             </div>
             :
             <div className="pause-btn">
-                <button onClick={stopPlayer}>Pause</button>
+                <button onClick={stopPlayer}>mute</button>
             </div>
         }
         </div>

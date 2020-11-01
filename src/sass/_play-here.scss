@@ -25,6 +25,14 @@
             color: #000;
             padding: .3rem;
         }
+
+        &.active {
+            button {
+                background: #aaaaaa;
+                color: #fff;
+                border: none;
+            }
+        }
     }
 }
 
