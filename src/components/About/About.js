@@ -30,7 +30,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="about-content">
-                    <p>Inés Vogelfang is a Brooklyn based editor from Argentina. She studied film at The University of Buenos Aires, and holds a Masters in Media Studies and Documentary Film degree from The New School in New York City.</p> 
+                    <p>Inés Vogelfang is a Brooklyn based filmmaker and film editor from Argentina. She studied film at The University of Buenos Aires, and holds a Masters in Media Studies and Documentary Film degree from The New School in New York City.</p> 
                     <p>Some short documentaries she directed and edited were screened at DOCNYC, Corto Circuito, Offside Film Fest, Alamo Drafthouse, and purchased by Filmin in Europe. A fiction short Inés edited, “Leo’s Shoulder” by Carlos Ledesma, was screened at BAFICI. She was part of the editing team in feature documentaries that went onto IFP labs, and International Film Festivals like DOCNYC, Venice Film Festival, and SXSW.</p>
                     <p>
                         Inés is an alumna of the Imagine Science Film Festival, and with “You Play Here”, her interactive documentary about immigration and the public space, she was part of DCTV’s Documentary WIP Lab with Yance Ford. She was a 2019-20 mentee at the Karen Schmeer Diversity in The Edit Room Fellowship.
