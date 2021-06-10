@@ -21,6 +21,10 @@
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media only screen and (max-width: 600px) {
+        top: 50%;
+    }
 }
 
 // fixed full screen

@@ -43,10 +43,16 @@ const Home = () => {
                     <p className="name">Inés Vogelfang | Interactive Map</p>
                     <h1>You Play Here</h1>
                     <p>
-                       As Immigrants, how do we find our communities?<br />
-                       Can it be through a recreational activity in a public space?<br /> In this
-                       project you'll hear me trying to find the answer while you navigate 
-                       through a made up map of New York City's public spaces
+                        As Immigrants, how do we find our communities?<br />
+                        Can it be through a recreational activity in a public space?<br />
+                        In this project you'll hear me trying to find the answer while you<br />
+                        navigate through a made up map of New York City's public spaces.<br />
+                        <br />
+                        You Play Here was originally an hybrid documentary - art installation,<br />
+                        but with the development of Covid 19, I decided to bring the project online.<br />
+                        The project is always in the search of the kinship between sports and community,<br /> 
+                        so If you're part of a group that plays sports in a public space,<br />
+                        or know of anyone who does, please get in touch with me via the contact form. 
                     </p>
                     <h2 className="button"><Link to="/play">Play Here</Link></h2>
                 </div>
